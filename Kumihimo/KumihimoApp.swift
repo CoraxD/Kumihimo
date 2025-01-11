@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct KumihimoApp: App {
     var body: some Scene {
-        WindowGroup {
+			Window("Kumihimo", id: "main") {
             ContentView()
         }
     }
