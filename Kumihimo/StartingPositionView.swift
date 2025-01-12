@@ -8,13 +8,11 @@
 import SwiftUI
 
 struct StartingPositionView: View {
-	@Binding var colors: [Int: Color]
+	@EnvironmentObject var braidStorage: BraidStorage
 	
-	@State var braid: Braid = Braid()
 	@State var startingPosition: StartingPosition = .octo8
 	@State var color: Color = .white
 	@State var activeColor: Color = .white
-	@State var activeThread: Set<Int> = []
 	
 	@StateObject var helper: MainViewHelper = MainViewHelper()
 	
@@ -28,23 +26,29 @@ struct StartingPositionView: View {
 						.stroke(.black)
 						.padding(40)
 						.onTapGesture {
-							activeThread = []
+							braidStorage.activeThread = []
 						}
-					ForEach(braid.startingPosition.positionArray(), id: \.self.number) {thread in
+					ForEach(braidStorage.curBraid.startingPosition.positionArray(), id: \.self.number) {thread in
 						let radius = min(geometry.size.width, geometry.size.height) / 2 - 30
 						ThreadView(number: thread.number,
-											 colors: $colors,
-											 activeThread: $activeThread)
+											 colors: $braidStorage.colors,
+											 activeThread: $braidStorage.activeThread)
 							.offset(x: thread.position.x * radius,
 											y: thread.position.y * radius)
 							.onTapGesture {
-								if activeThread.contains(thread.number) {
-									activeThread.remove(thread.number)
-								} else {
-									activeThread.insert(thread.number)
-									if !NSColorPanel.shared.isVisible {
-										NSColorPanel.shared.makeKeyAndOrderFront(nil)
+								if !NSColorPanel.shared.isVisible {
+									NSColorPanel.shared.makeKeyAndOrderFront(nil)
+								}
+								if NSEvent.modifierFlags.contains(.shift) || NSEvent.modifierFlags.contains(.option) {
+									if braidStorage.activeThread.contains(thread.number) {
+										braidStorage.activeThread.remove(thread.number)
+									} else {
+										braidStorage.activeThread.insert(thread.number)
 									}
+								} else {
+									braidStorage.activeThread.removeAll()
+									braidStorage.activeThread.insert(thread.number)
+									NSColorPanel.shared.color = NSColor( braidStorage.colors[thread.number] ?? .white)
 								}
 							}
 							.onAppear {
@@ -52,8 +56,8 @@ struct StartingPositionView: View {
 								NSColorPanel.shared.setAction(#selector(self.helper.setColor))
 							}
 							.onChange(of: helper.color) { oldValue, newValue in
-								for index in activeThread {
-									colors[index] = helper.color
+								for index in braidStorage.activeThread {
+									braidStorage.colors[index] = helper.color
 								}
 							}
 					}
@@ -72,5 +76,6 @@ class MainViewHelper: ObservableObject {
 }
 
 #Preview {
-	StartingPositionView(colors: .constant([1: .red, 2: .indigo]))
+	StartingPositionView()
+		.environmentObject(BraidStorage())
 }

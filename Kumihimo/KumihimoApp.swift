@@ -12,6 +12,7 @@ struct KumihimoApp: App {
     var body: some Scene {
 			Window("Kumihimo", id: "main") {
             ContentView()
+					.environmentObject(BraidStorage())
         }
     }
 }

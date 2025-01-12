@@ -7,12 +7,8 @@
 
 import Foundation
 
-struct Grid: Codable {
-	var cells: [Cell] = []
-}
-
-struct Cell: Hashable, Codable {
-	var number: Int = 1
-	var numOffset: CGPoint = CGPoint(x: 0, y: 0)
-	var corners: [CGPoint] = []
+enum GridType: String, Codable {
+	case grid4a
+	case grid8a
+	case grid8f
 }

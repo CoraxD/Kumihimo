@@ -8,10 +8,18 @@
 import Foundation
 import SwiftUI
 
-class BraidStorage {
-	var braids: [Braid] = [Braid()]
-	var curBraid: Braid = Braid()
-	func loadBraids() async {
+class BraidStorage: ObservableObject {
+	@Published var braids: [Braid] = [Braid()]
+	@Published var colors: [Int: Color] = [1:.green]
+	@Published var activeThread: Set<Int> = []
+	@Published var curBraid: Braid = Braid() {
+		didSet {
+			activeThread = []
+			colors = [:]
+		}
+	}
+	
+	func loadBraids(){
 		
 		var resultBraids: [Braid] = []
 		
@@ -24,12 +32,10 @@ class BraidStorage {
 				print(error)
 			}
 		}
-		self.braids = resultBraids
-		if !braids.isEmpty {
+		
+		if !resultBraids.isEmpty {
+			self.braids = resultBraids
 			curBraid = braids[0]
-		} else {
-			braids.append(curBraid)
-			saveBraids()
 		}
 	}
 	func saveBraids() {

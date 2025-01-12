@@ -8,31 +8,24 @@
 import SwiftUI
 
 struct GridView: View {
-	@Binding var colors: [Int: Color]
+	@EnvironmentObject var braidStorage: BraidStorage
+	@State var gridType: GridType = .grid8f
 	
-	@State var braid: Braid = Braid()
 	var body: some View {
 		ZStack {
-			ForEach(braid.grid.cells, id: \.self) {cell in
-				ZStack {
-					Path {path in
-						path.move(to: cell.corners[0])
-						for index in 1..<cell.corners.count {
-							path.addLine(to: cell.corners[index])
-						}
-						path.closeSubpath()
-					}
-					.fill(colors[cell.number] ?? .white)
-					.stroke(.black)
-					Text("\(cell.number)")
-						.position(x: cell.numOffset.x,
-										y: cell.numOffset.y)
-				}
+			switch braidStorage.curBraid.grid {
+			case .grid4a:
+				Grid8fView()
+			case .grid8a:
+				Grid8aView()
+			case .grid8f:
+				Grid8fView()
 			}
 		}
 	}
 }
 
 #Preview {
-	GridView(colors: .constant([1: .red, 2: .green]))
+	GridView()
+		.environmentObject(BraidStorage())
 }
