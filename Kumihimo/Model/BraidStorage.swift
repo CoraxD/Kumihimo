@@ -15,7 +15,14 @@ class BraidStorage: ObservableObject {
 	@Published var curBraid: Braid = Braid() {
 		didSet {
 			activeThread = []
-			colors = [:]
+			switch curBraid.threadCount {
+			case 4:
+				colors = [1:.gray, 2: .white, 3: .gray, 4: .white]
+			case 8:
+				colors = [1:.gray, 2: .white, 3: .gray, 4: .white, 5:.gray, 6: .white, 7: .gray, 8: .white]
+			default:
+				colors = [1:.gray, 2: .white, 3: .gray, 4: .white]
+			}
 		}
 	}
 	

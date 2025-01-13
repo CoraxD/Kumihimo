@@ -30,14 +30,23 @@ enum StartingPosition: String, Codable {
 							Thread(number: 7, position: CGPoint(x: -1.0, y: 0.0)),
 							Thread(number: 8, position: CGPoint(x: -0.72, y: -0.72))]
 		case .cross8:
-			return [Thread(number: 1, position: CGPoint(x: -0.1, y: -1.0)),
-							Thread(number: 2, position: CGPoint(x: 0.1, y: -1.0)),
-							Thread(number: 3, position: CGPoint(x: 1.0, y: -0.1)),
-							Thread(number: 4, position: CGPoint(x: 1.0, y: 0.1)),
-							Thread(number: 5, position: CGPoint(x: 0.1, y: 1.0)),
-							Thread(number: 6, position: CGPoint(x: -0.1, y: 1.0)),
-							Thread(number: 7, position: CGPoint(x: -1.0, y: 0.1)),
-							Thread(number: 8, position: CGPoint(x: -1.0, y: -0.1))]
+			return [Thread(number: 1, position: CGPoint(x: -0.15, y: -1.0)),
+							Thread(number: 2, position: CGPoint(x: 0.15, y: -1.0)),
+							Thread(number: 3, position: CGPoint(x: 1.0, y: -0.15)),
+							Thread(number: 4, position: CGPoint(x: 1.0, y: 0.15)),
+							Thread(number: 5, position: CGPoint(x: 0.15, y: 1.0)),
+							Thread(number: 6, position: CGPoint(x: -0.15, y: 1.0)),
+							Thread(number: 7, position: CGPoint(x: -1.0, y: 0.15)),
+							Thread(number: 8, position: CGPoint(x: -1.0, y: -0.15))]
+		case .line8:
+			return [Thread(number: 1, position: CGPoint(x: -0.45, y: -0.9)),
+							Thread(number: 2, position: CGPoint(x: -0.15, y: -1.0)),
+							Thread(number: 3, position: CGPoint(x: 0.15, y: -1.0)),
+							Thread(number: 4, position: CGPoint(x: 0.45, y: -0.9)),
+							Thread(number: 5, position: CGPoint(x: 0.45, y: 0.9)),
+							Thread(number: 6, position: CGPoint(x: 0.15, y: 1.0)),
+							Thread(number: 7, position: CGPoint(x: -0.15, y: 1.0)),
+							Thread(number: 8, position: CGPoint(x: -0.45, y: 0.9))]
 		default:
 			return [Thread(number: 1, position: CGPoint(x: 0.0, y: 1.0))]
 		}

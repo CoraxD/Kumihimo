@@ -9,17 +9,26 @@ import SwiftUI
 
 struct GridView: View {
 	@EnvironmentObject var braidStorage: BraidStorage
-	@State var gridType: GridType = .grid8f
 	
 	var body: some View {
-		ZStack {
-			switch braidStorage.curBraid.grid {
-			case .grid4a:
-				Grid8fView()
-			case .grid8a:
-				Grid8aView()
-			case .grid8f:
-				Grid8fView()
+		VStack {
+			ZStack {
+				switch braidStorage.curBraid.grid {
+				case .grid4a:
+					Grid4aView()
+				case .grid8a:
+					Grid8aView()
+				case .grid8c:
+					Grid8cView()
+				case .grid8d:
+					Grid8dView()
+				case .grid8e:
+					Grid8eView()
+				case .grid8f:
+					Grid8fView()
+				default:
+					Grid4aView()
+				}
 			}
 		}
 	}

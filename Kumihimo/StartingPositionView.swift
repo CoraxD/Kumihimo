@@ -52,6 +52,7 @@ struct StartingPositionView: View {
 								}
 							}
 							.onAppear {
+								NSColorPanel.shared.makeKeyAndOrderFront(nil)
 								NSColorPanel.shared.setTarget(self.helper)
 								NSColorPanel.shared.setAction(#selector(self.helper.setColor))
 							}
