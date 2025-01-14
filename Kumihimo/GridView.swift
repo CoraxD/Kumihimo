@@ -13,18 +13,20 @@ struct GridView: View {
 	var body: some View {
 		VStack {
 			ZStack {
-				switch braidStorage.curBraid.grid {
-				case .grid4a:
+				switch braidStorage.curBraid.name {
+				case "Braid 4A":
 					Grid4aView()
-				case .grid8a:
+				case "Braid 8A":
 					Grid8aView()
-				case .grid8c:
+				case "Braid 8B":
+					Grid8bView()
+				case "Braid 8C":
 					Grid8cView()
-				case .grid8d:
+				case "Braid 8D":
 					Grid8dView()
-				case .grid8e:
+				case "Braid 8E":
 					Grid8eView()
-				case .grid8f:
+				case "Braid 8F":
 					Grid8fView()
 				default:
 					Grid4aView()

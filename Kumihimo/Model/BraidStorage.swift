@@ -20,6 +20,9 @@ class BraidStorage: ObservableObject {
 				colors = [1:.gray, 2: .white, 3: .gray, 4: .white]
 			case 8:
 				colors = [1:.gray, 2: .white, 3: .gray, 4: .white, 5:.gray, 6: .white, 7: .gray, 8: .white]
+			case 16:
+				colors = [1:.gray, 2: .white, 3: .gray, 4: .white, 5:.gray, 6: .white, 7: .gray, 8: .white,
+									9:.gray, 10: .white, 11: .gray, 12: .white, 13:.gray, 14: .white, 15: .gray, 16: .white]
 			default:
 				colors = [1:.gray, 2: .white, 3: .gray, 4: .white]
 			}

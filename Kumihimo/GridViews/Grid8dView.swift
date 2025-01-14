@@ -36,7 +36,8 @@ struct Grid8dView: View {
 					.fill(braidStorage.colors[8] ?? .white)
 					.stroke(.black)
 				Grid8dLine()
-					.stroke(.gray, lineWidth: 3)
+					.stroke(.gray, style: StrokeStyle( lineWidth: 3, dash: [6]))
+					.stroke(.white, style: StrokeStyle( lineWidth: 3, dash: [6], dashPhase: 6))
 			}
 			.frame(width: 300, height: 250)
     }

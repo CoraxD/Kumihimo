@@ -12,18 +12,18 @@ struct SchemaView: View {
 	
 	var body: some View {
 		ZStack {
-			switch braidStorage.curBraid.grid {
-			case .grid4a:
+			switch braidStorage.curBraid.name {
+			case "Braid 4A":
 				Scheme4aView()
-			case .grid8a:
+			case "Braid 8A":
 				Scheme4aView()
-			case .grid8c:
+			case "Braid 8B":
 				Scheme4aView()
-			case .grid8d:
+			case "Braid 8C":
 				Scheme4aView()
-			case .grid8e:
+			case "Braid 8D":
 				Scheme4aView()
-			case .grid8f:
+			case "Braid 8E":
 				Scheme4aView()
 			default:
 				Scheme4aView()

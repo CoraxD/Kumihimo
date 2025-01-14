@@ -31,7 +31,7 @@ struct ContentView: View {
 				}
 			}
 			.padding()
-			.frame(minWidth: 250)
+			.frame(minWidth: 280, maxWidth: 350)
 		} detail: {
 			VStack {
 				Spacer()

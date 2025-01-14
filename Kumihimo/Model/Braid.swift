@@ -18,31 +18,13 @@ struct Braid: Codable, Identifiable, Equatable, Hashable {
 	var name: String = "Braid"
 	var threadCount: Int = 4
 	var startingPosition: StartingPosition = .cross4
-	var grid: GridType = .grid4a
-	var profile: ProfileType = .thorus
+	var profile: ProfileType = .xSquare
 	
 	func hash(into hasher: inout Hasher) {
 		hasher.combine(id)
 	}
 }
 
-
-enum GridType: String, Codable {
-	case grid4a
-	case grid8a
-	case grid8b
-	case grid8c
-	case grid8d
-	case grid8e
-	case grid8f
-	case grid8g
-	case grid8h
-	case grid8j
-	case grid8k
-	case grid8l
-	case grid8m
-	case grid8n
-}
 
 enum ProfileType: String, Codable {
 	case circle
@@ -51,4 +33,9 @@ enum ProfileType: String, Codable {
 	case rectangle
 	case thorus
 	case line
+	case round
+	case trapezium
+	case gantel
+	case xSquare
+	case octo
 }

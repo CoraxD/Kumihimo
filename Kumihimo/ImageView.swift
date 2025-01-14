@@ -12,29 +12,81 @@ struct ImageView: View {
 	
 	var body: some View {
 		ZStack {
-			switch braidStorage.curBraid.grid {
-			case .grid4a:
+			switch braidStorage.curBraid.name {
+			case "Braid 4A":
 				Image("Image-4a")
 					.resizable()
 					.scaledToFit()
-			case .grid8a:
+			case "Braid 8A":
 				Image("Image-8a")
 					.resizable()
 					.scaledToFit()
-			case .grid8c:
+			case "Braid 8B":
+				Image("Image-8b")
+					.resizable()
+					.scaledToFit()
+			case "Braid 8C":
 				Image("Image-8c")
 					.resizable()
 					.scaledToFit()
-			case .grid8d:
+			case "Braid 8D":
 				Image("Image-8d")
 					.resizable()
 					.scaledToFit()
-			case .grid8e:
+			case "Braid 8E":
 				Image("Image-8e")
 					.resizable()
 					.scaledToFit()
-			case .grid8f:
+			case "Braid 8F":
 				Image("Image-8f")
+					.resizable()
+					.scaledToFit()
+			case "Braid 8G":
+				Image("Image-8g")
+					.resizable()
+					.scaledToFit()
+			case "Braid 8H":
+				Image("Image-8h")
+					.resizable()
+					.scaledToFit()
+			case "Braid 8J":
+				Image("Image-8j")
+					.resizable()
+					.scaledToFit()
+			case "Braid 8K":
+				Image("Image-8k")
+					.resizable()
+					.scaledToFit()
+			case "Braid 8L":
+				Image("Image-8l")
+					.resizable()
+					.scaledToFit()
+			case "Braid 8M":
+				Image("Image-8m")
+					.resizable()
+					.scaledToFit()
+			case "Braid 8N":
+				Image("Image-8n")
+					.resizable()
+					.scaledToFit()
+			case "Braid 16A":
+				Image("Image-16a")
+					.resizable()
+					.scaledToFit()
+			case "Braid 16B":
+				Image("Image-16b")
+					.resizable()
+					.scaledToFit()
+			case "Braid 16C":
+				Image("Image-16c")
+					.resizable()
+					.scaledToFit()
+			case "Braid 16D":
+				Image("Image-16d")
+					.resizable()
+					.scaledToFit()
+			case "Braid 16E":
+				Image("Image-16e")
 					.resizable()
 					.scaledToFit()
 			default:
