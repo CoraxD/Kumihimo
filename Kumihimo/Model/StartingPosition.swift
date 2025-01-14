@@ -101,8 +101,6 @@ enum StartingPosition: String, Codable {
 							Thread(number: 14, position: CGPoint(x: -0.41, y: 0.92)),
 							Thread(number: 15, position: CGPoint(x: -0.66, y: 0.79)),
 							Thread(number: 16, position: CGPoint(x: -0.88, y: 0.6))]
-		default:
-			return [Thread(number: 1, position: CGPoint(x: 0.0, y: 1.0))]
 		}
 	}
 }
