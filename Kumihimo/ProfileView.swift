@@ -35,7 +35,7 @@ struct ProfileView: View {
 				Rectangle()
 					.fill(.white)
 					.stroke(.black, lineWidth: 3)
-					.frame(width: 40, height: 20)
+					.frame(width: 40, height: 15)
 			case .thorus:
 				Rectangle()
 					.fill(.white)
@@ -68,10 +68,10 @@ struct ProfileView: View {
 				.stroke(.black, lineWidth: 3)
 				.frame(width: 40, height: 20)
 			case .round:
-				RoundedRectangle(cornerRadius: 10)
+				RoundedRectangle(cornerRadius: 7.5)
 					.fill(.white)
 					.stroke(.black, lineWidth: 3)
-					.frame(width: 40, height: 20)
+					.frame(width: 40, height: 15)
 			case .gantel:
 				Path { path in
 					path.move(to: CGPoint(x: 0, y: 20))

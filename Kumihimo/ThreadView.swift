@@ -19,6 +19,7 @@ struct ThreadView: View {
 				.stroke(activeThread.contains(number) ? .gray : .black)
 				.frame(width: 20)
 			Text("\(number)")
+				.foregroundStyle(colors[number]?.contrastColor() ?? .black)
 		}
 	}
 }

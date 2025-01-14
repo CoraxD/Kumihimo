@@ -7,6 +7,24 @@
 
 import SwiftUI
 
+extension Color {
+	public func contrastColor() -> Color {
+		guard let components = cgColor?.components, components.count >= 3 else {
+			return .black
+		}
+		
+		let r = Float(components[0])
+		let g = Float(components[1])
+		let b = Float(components[2])
+		
+		if 0.299 * r + 0.587 * g + 0.114 * b < 0.5 {
+			return .white
+		} else {
+			return .black
+		}
+	}
+}
+
 extension Color: Codable {
 	init(hex: String) {
 		let rgba = hex.toRGBA()
