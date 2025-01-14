@@ -34,13 +34,13 @@ struct ContentView: View {
 			.frame(minWidth: 280, maxWidth: 350)
 		} detail: {
 			VStack {
-				Spacer()
+//				Spacer()
 				if showGrid {
 					GridView()
 				} else {
 					SchemaView()
 				}
-				Spacer()
+				/*Spacer()
 				HStack {
 					Button("Show Grid", systemImage: "rectangle.pattern.checkered")
 					{
@@ -53,7 +53,7 @@ struct ContentView: View {
 					}
 				}
 				.padding()
-				.buttonStyle(.plain)
+				.buttonStyle(.plain)*/
 			}
 		}
 		.frame(minWidth: 600, minHeight: 450)

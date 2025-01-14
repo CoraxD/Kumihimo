@@ -15,16 +15,6 @@ struct SchemaView: View {
 			switch braidStorage.curBraid.name {
 			case "Braid 4A":
 				Scheme4aView()
-			case "Braid 8A":
-				Scheme4aView()
-			case "Braid 8B":
-				Scheme4aView()
-			case "Braid 8C":
-				Scheme4aView()
-			case "Braid 8D":
-				Scheme4aView()
-			case "Braid 8E":
-				Scheme4aView()
 			default:
 				Scheme4aView()
 			}

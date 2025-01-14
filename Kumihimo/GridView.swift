@@ -28,6 +28,8 @@ struct GridView: View {
 					Grid8eView()
 				case "Braid 8F":
 					Grid8fView()
+				case "Braid 8G":
+					Grid8gView()
 				default:
 					Grid4aView()
 				}
