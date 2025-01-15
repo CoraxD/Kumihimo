@@ -1,0 +1,49 @@
+//
+//  GridEditView.swift
+//  Kumihimo
+//
+//  Created by Дмитрий on 11.01.2025.
+//
+
+import SwiftUI
+
+struct Grid8kView: View {
+	@EnvironmentObject var braidStorage: BraidStorage
+    var body: some View {
+			ZStack {
+				Grid8kShape1()
+					.fill(braidStorage.colors[1] ?? .white)
+					.stroke(.black)
+				Grid8kShape2()
+					.fill(braidStorage.colors[2] ?? .white)
+					.stroke(.black)
+				Grid8kShape3()
+					.fill(braidStorage.colors[3] ?? .white)
+					.stroke(.black)
+				Grid8kShape4()
+					.fill(braidStorage.colors[4] ?? .white)
+					.stroke(.black)
+				Grid8kShape5()
+					.fill(braidStorage.colors[5] ?? .white)
+					.stroke(.black)
+				Grid8kShape6()
+					.fill(braidStorage.colors[6] ?? .white)
+					.stroke(.black)
+				Grid8kShape7()
+					.fill(braidStorage.colors[7] ?? .white)
+					.stroke(.black)
+				Grid8kShape8()
+					.fill(braidStorage.colors[8] ?? .white)
+					.stroke(.black)
+				Grid8kLine()
+					.stroke(.gray, style: StrokeStyle( lineWidth: 3, dash: [6]))
+					.stroke(.white, style: StrokeStyle( lineWidth: 3, dash: [6], dashPhase: 6))
+			}
+			.frame(width: 300, height: 240)
+    }
+}
+
+#Preview {
+    Grid8kView()
+		.environmentObject(BraidStorage())
+}
