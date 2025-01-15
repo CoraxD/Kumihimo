@@ -15,26 +15,26 @@ import SwiftUI
 struct Grid8hShape1: Shape {
 	func path(in rect: CGRect) -> Path {
 		
-		let path = NSBezierPath()
+		var path = Path()
 		
 			//// Group 1
 			//// Rectangle 1 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.00271 * rect.width, y: rect.minY + 0.20565 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.11368 * rect.width, y: rect.minY + 0.30374 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.33561 * rect.width, y: rect.minY + 0.10757 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.22465 * rect.width, y: rect.minY + 0.00949 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.00271 * rect.width, y: rect.minY + 0.20565 * rect.height))
-		path.close()
+		path.move(to: CGPoint(x: rect.minX + 0.00271 * rect.width, y: rect.minY + 0.20565 * rect.height))
+		path.addLine(to: CGPoint(x: rect.minX + 0.11368 * rect.width, y: rect.minY + 0.30374 * rect.height))
+		path.addLine(to: CGPoint(x: rect.minX + 0.33561 * rect.width, y: rect.minY + 0.10757 * rect.height))
+		path.addLine(to: CGPoint(x: rect.minX + 0.22465 * rect.width, y: rect.minY + 0.00949 * rect.height))
+		path.addLine(to: CGPoint(x: rect.minX + 0.00271 * rect.width, y: rect.minY + 0.20565 * rect.height))
+		path.closeSubpath()
 		
 			//// Rectangle 13 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.44687 * rect.width, y: rect.minY + 0.59791 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.55784 * rect.width, y: rect.minY + 0.69599 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.77978 * rect.width, y: rect.minY + 0.49983 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.66881 * rect.width, y: rect.minY + 0.40175 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.44687 * rect.width, y: rect.minY + 0.59791 * rect.height))
-		path.close()
+		path.move(to: CGPoint(x: rect.minX + 0.44687 * rect.width, y: rect.minY + 0.59791 * rect.height))
+		path.addLine(to: CGPoint(x: rect.minX + 0.55784 * rect.width, y: rect.minY + 0.69599 * rect.height))
+		path.addLine(to: CGPoint(x: rect.minX + 0.77978 * rect.width, y: rect.minY + 0.49983 * rect.height))
+		path.addLine(to: CGPoint(x: rect.minX + 0.66881 * rect.width, y: rect.minY + 0.40175 * rect.height))
+		path.addLine(to: CGPoint(x: rect.minX + 0.44687 * rect.width, y: rect.minY + 0.59791 * rect.height))
+		path.closeSubpath()
 		
-		return Path(path.cgPath)
+		return path
 	}
 }
 
