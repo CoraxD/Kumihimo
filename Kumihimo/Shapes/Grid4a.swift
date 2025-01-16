@@ -15,107 +15,111 @@ import SwiftUI
 struct Grid4aShape1: Shape {
 	func path(in rect: CGRect) -> Path {
 		
-		let path = NSBezierPath()
+		var path = Path()
+		let frame: CGRect = rect.fitRect(ratio: 150.0 / 200.0)
 		
 			//// Group
 			//// Rectangle Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.00000 * rect.width, y: rect.minY + 0.40000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.24967 * rect.width, y: rect.minY + 0.40000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.24967 * rect.width, y: rect.minY + 0.00000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.00000 * rect.width, y: rect.minY + 0.00000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.00000 * rect.width, y: rect.minY + 0.40000 * rect.height))
-		path.close()
+		path.move(to: CGPoint(x: frame.minX + 0.00000 * frame.width, y: frame.minY + 0.40000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.24967 * frame.width, y: frame.minY + 0.40000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.24967 * frame.width, y: frame.minY + 0.00000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.00000 * frame.width, y: frame.minY + 0.00000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.00000 * frame.width, y: frame.minY + 0.40000 * frame.height))
+		path.closeSubpath()
 		
 		
 			//// Rectangle 6 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.49933 * rect.width, y: rect.minY + 0.80000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.74900 * rect.width, y: rect.minY + 0.80000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.74900 * rect.width, y: rect.minY + 0.40000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.49933 * rect.width, y: rect.minY + 0.40000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.49933 * rect.width, y: rect.minY + 0.80000 * rect.height))
-		path.close()
+		path.move(to: CGPoint(x: frame.minX + 0.49933 * frame.width, y: frame.minY + 0.80000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.74900 * frame.width, y: frame.minY + 0.80000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.74900 * frame.width, y: frame.minY + 0.40000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.49933 * frame.width, y: frame.minY + 0.40000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.49933 * frame.width, y: frame.minY + 0.80000 * frame.height))
+		path.closeSubpath()
 
-		return Path(path.cgPath)
+		return path
 	}
 }
 
 struct Grid4aShape2: Shape {
 	func path(in rect: CGRect) -> Path {
 		
-		let path = NSBezierPath()
+		var path = Path()
+		let frame: CGRect = rect.fitRect(ratio: 150.0 / 200.0)
 		
 			//// Group 2
 			//// Rectangle 3 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.24967 * rect.width, y: rect.minY + 0.60000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.49933 * rect.width, y: rect.minY + 0.60000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.49933 * rect.width, y: rect.minY + 0.20000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.24967 * rect.width, y: rect.minY + 0.20000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.24967 * rect.width, y: rect.minY + 0.60000 * rect.height))
-		path.close()
+		path.move(to: CGPoint(x: frame.minX + 0.24967 * frame.width, y: frame.minY + 0.60000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.49933 * frame.width, y: frame.minY + 0.60000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.49933 * frame.width, y: frame.minY + 0.20000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.24967 * frame.width, y: frame.minY + 0.20000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.24967 * frame.width, y: frame.minY + 0.60000 * frame.height))
+		path.closeSubpath()
 		
 		
 			//// Rectangle 8 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.74933 * rect.width, y: rect.minY + 1.00000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.99900 * rect.width, y: rect.minY + 1.00000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.99900 * rect.width, y: rect.minY + 0.60000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.74933 * rect.width, y: rect.minY + 0.60000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.74933 * rect.width, y: rect.minY + 1.00000 * rect.height))
-		path.close()
+		path.move(to: CGPoint(x: frame.minX + 0.74933 * frame.width, y: frame.minY + 1.00000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.99900 * frame.width, y: frame.minY + 1.00000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.99900 * frame.width, y: frame.minY + 0.60000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.74933 * frame.width, y: frame.minY + 0.60000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.74933 * frame.width, y: frame.minY + 1.00000 * frame.height))
+		path.closeSubpath()
 		
-		return Path(path.cgPath)
+		return path
 	}
 }
 
 struct Grid4aShape3: Shape {
 	func path(in rect: CGRect) -> Path {
 		
-		let path = NSBezierPath()
+		var path = Path()
+		let frame: CGRect = rect.fitRect(ratio: 150.0 / 200.0)
 		
 			//// Group 3
 			//// Rectangle 2 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.00000 * rect.width, y: rect.minY + 0.80000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.24967 * rect.width, y: rect.minY + 0.80000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.24967 * rect.width, y: rect.minY + 0.40000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.00000 * rect.width, y: rect.minY + 0.40000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.00000 * rect.width, y: rect.minY + 0.80000 * rect.height))
-		path.close()
+		path.move(to: CGPoint(x: frame.minX + 0.00000 * frame.width, y: frame.minY + 0.80000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.24967 * frame.width, y: frame.minY + 0.80000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.24967 * frame.width, y: frame.minY + 0.40000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.00000 * frame.width, y: frame.minY + 0.40000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.00000 * frame.width, y: frame.minY + 0.80000 * frame.height))
+		path.closeSubpath()
 		
 		
 			//// Rectangle 5 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.49933 * rect.width, y: rect.minY + 0.40000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.74900 * rect.width, y: rect.minY + 0.40000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.74900 * rect.width, y: rect.minY + 0.00000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.49933 * rect.width, y: rect.minY + 0.00000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.49933 * rect.width, y: rect.minY + 0.40000 * rect.height))
-		path.close()
+		path.move(to: CGPoint(x: frame.minX + 0.49933 * frame.width, y: frame.minY + 0.40000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.74900 * frame.width, y: frame.minY + 0.40000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.74900 * frame.width, y: frame.minY + 0.00000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.49933 * frame.width, y: frame.minY + 0.00000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.49933 * frame.width, y: frame.minY + 0.40000 * frame.height))
+		path.closeSubpath()
 		
-		return Path(path.cgPath)
+		return path
 	}
 }
 
 struct Grid4aShape4: Shape {
 	func path(in rect: CGRect) -> Path {
 		
-		let path = NSBezierPath()
+		var path = Path()
+		let frame: CGRect = rect.fitRect(ratio: 150.0 / 200.0)
 		
 			//// Group 4
 			//// Rectangle 4 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.24967 * rect.width, y: rect.minY + 1.00000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.49933 * rect.width, y: rect.minY + 1.00000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.49933 * rect.width, y: rect.minY + 0.60000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.24967 * rect.width, y: rect.minY + 0.60000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.24967 * rect.width, y: rect.minY + 1.00000 * rect.height))
-		path.close()
+		path.move(to: CGPoint(x: frame.minX + 0.24967 * frame.width, y: frame.minY + 1.00000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.49933 * frame.width, y: frame.minY + 1.00000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.49933 * frame.width, y: frame.minY + 0.60000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.24967 * frame.width, y: frame.minY + 0.60000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.24967 * frame.width, y: frame.minY + 1.00000 * frame.height))
+		path.closeSubpath()
 		
 			//// Rectangle 7 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.74933 * rect.width, y: rect.minY + 0.60000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.99900 * rect.width, y: rect.minY + 0.60000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.99900 * rect.width, y: rect.minY + 0.20000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.74933 * rect.width, y: rect.minY + 0.20000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.74933 * rect.width, y: rect.minY + 0.60000 * rect.height))
-		path.close()
+		path.move(to: CGPoint(x: frame.minX + 0.74933 * frame.width, y: frame.minY + 0.60000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.99900 * frame.width, y: frame.minY + 0.60000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.99900 * frame.width, y: frame.minY + 0.20000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.74933 * frame.width, y: frame.minY + 0.20000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.74933 * frame.width, y: frame.minY + 0.60000 * frame.height))
+		path.closeSubpath()
 		
-		return Path(path.cgPath)
+		return path
 	}
 }
 

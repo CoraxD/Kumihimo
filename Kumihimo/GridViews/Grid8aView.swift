@@ -36,7 +36,7 @@ struct Grid8aView: View {
 					.fill(braidStorage.colors[8] ?? .white)
 					.stroke(.black)
 			}
-			.frame(width: 300, height: 200)
+			.padding(20)
     }
 }
 
