@@ -16,8 +16,10 @@ struct Grid8lShape1: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		var path = Path()
-		let shapeSize = min(rect.width, rect.height)
-		let ancor: CGPoint = rect.width < rect.height
+		let shapeSize = rect.width < rect.height * 1.1
+		? rect.width
+		: rect.height
+		let ancor: CGPoint = rect.width < rect.height * 1.1
 		? CGPoint(x: 0, y: (rect.height - rect.width) / 2)
 		: CGPoint(x: (rect.width - rect.height) / 2, y: 0)
 		
@@ -56,8 +58,10 @@ struct Grid8lShape2: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		var path = Path()
-		let shapeSize = min(rect.width, rect.height)
-		let ancor: CGPoint = rect.width < rect.height
+		let shapeSize = rect.width < rect.height * 1.1
+		? rect.width
+		: rect.height
+		let ancor: CGPoint = rect.width < rect.height * 1.1
 		? CGPoint(x: 0, y: (rect.height - rect.width) / 2)
 		: CGPoint(x: (rect.width - rect.height) / 2, y: 0)
 		
@@ -96,8 +100,10 @@ struct Grid8lShape3: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		var path = Path()
-		let shapeSize = min(rect.width, rect.height)
-		let ancor: CGPoint = rect.width < rect.height
+		let shapeSize = rect.width < rect.height * 1.1
+		? rect.width
+		: rect.height
+		let ancor: CGPoint = rect.width < rect.height * 1.1
 		? CGPoint(x: 0, y: (rect.height - rect.width) / 2)
 		: CGPoint(x: (rect.width - rect.height) / 2, y: 0)
 		
@@ -146,8 +152,10 @@ struct Grid8lShape4: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		var path = Path()
-		let shapeSize = min(rect.width, rect.height)
-		let ancor: CGPoint = rect.width < rect.height
+		let shapeSize = rect.width < rect.height * 1.1
+		? rect.width
+		: rect.height
+		let ancor: CGPoint = rect.width < rect.height * 1.1
 		? CGPoint(x: 0, y: (rect.height - rect.width) / 2)
 		: CGPoint(x: (rect.width - rect.height) / 2, y: 0)
 		
@@ -186,8 +194,10 @@ struct Grid8lShape5: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		var path = Path()
-		let shapeSize = min(rect.width, rect.height)
-		let ancor: CGPoint = rect.width < rect.height
+		let shapeSize = rect.width < rect.height * 1.1
+		? rect.width
+		: rect.height
+		let ancor: CGPoint = rect.width < rect.height * 1.1
 		? CGPoint(x: 0, y: (rect.height - rect.width) / 2)
 		: CGPoint(x: (rect.width - rect.height) / 2, y: 0)
 		
@@ -236,8 +246,10 @@ struct Grid8lShape6: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		var path = Path()
-		let shapeSize = min(rect.width, rect.height)
-		let ancor: CGPoint = rect.width < rect.height
+		let shapeSize = rect.width < rect.height * 1.1
+		? rect.width
+		: rect.height
+		let ancor: CGPoint = rect.width < rect.height * 1.1
 		? CGPoint(x: 0, y: (rect.height - rect.width) / 2)
 		: CGPoint(x: (rect.width - rect.height) / 2, y: 0)
 		
@@ -286,8 +298,10 @@ struct Grid8lShape7: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		var path = Path()
-		let shapeSize = min(rect.width, rect.height)
-		let ancor: CGPoint = rect.width < rect.height
+		let shapeSize = rect.width < rect.height * 1.1
+		? rect.width
+		: rect.height
+		let ancor: CGPoint = rect.width < rect.height * 1.1
 		? CGPoint(x: 0, y: (rect.height - rect.width) / 2)
 		: CGPoint(x: (rect.width - rect.height) / 2, y: 0)
 		
@@ -326,8 +340,10 @@ struct Grid8lShape8: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		var path = Path()
-		let shapeSize = min(rect.width, rect.height)
-		let ancor: CGPoint = rect.width < rect.height
+		let shapeSize = rect.width < rect.height * 1.1
+		? rect.width
+		: rect.height
+		let ancor: CGPoint = rect.width < rect.height * 1.1
 		? CGPoint(x: 0, y: (rect.height - rect.width) / 2)
 		: CGPoint(x: (rect.width - rect.height) / 2, y: 0)
 		
@@ -377,8 +393,10 @@ struct Grid8lLine: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		var path = Path()
-		let shapeSize = min(rect.width, rect.height)
-		let ancor: CGPoint = rect.width < rect.height
+		let shapeSize = rect.width < rect.height * 1.1
+		? rect.width
+		: rect.height
+		let ancor: CGPoint = rect.width < rect.height * 1.1
 		? CGPoint(x: 0, y: (rect.height - rect.width) / 2)
 		: CGPoint(x: (rect.width - rect.height) / 2, y: 0)
 		
