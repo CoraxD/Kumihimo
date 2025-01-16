@@ -34,29 +34,32 @@ struct ContentView: View {
 			.frame(minWidth: 280, maxWidth: 350)
 		} detail: {
 			VStack {
-//				Spacer()
+				Spacer()
 				if showGrid {
 					GridView()
 				} else {
 					SchemaView()
 				}
-				/*Spacer()
+				Spacer()
 				HStack {
 					Button("Show Grid", systemImage: "rectangle.pattern.checkered")
 					{
 						showGrid = true
 					}
+					.disabled(showGrid)
 					Spacer()
 					Button("Show Schema", systemImage: "timelapse")
 					{
 						showGrid = false
 					}
+					.disabled(!showGrid)
 				}
-				.padding()
-				.buttonStyle(.plain)*/
+				.padding(.top)
+				.buttonStyle(.plain)
 			}
+			.padding()
 		}
-		.frame(minWidth: 600, minHeight: 450)
+		.frame(minWidth: 600, minHeight: 550)
 		.onAppear {
 			braidStorage.loadBraids()
 		}

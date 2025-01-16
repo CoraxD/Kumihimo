@@ -16,38 +16,42 @@ struct Grid8fShape1: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		let path = NSBezierPath()
+		let shapeSize = min(rect.width, rect.height)
+		let ancor: CGPoint = rect.width < rect.height
+		? CGPoint(x: 0, y: (rect.height - rect.width) / 2)
+		: CGPoint(x: (rect.width - rect.height) / 2, y: 0)
 		
 			//// Group
 			//// Rectangle Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.00000 * rect.width, y: rect.minY + 0.11106 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.11119 * rect.width, y: rect.minY + 0.22225 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.22239 * rect.width, y: rect.minY + 0.11106 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.11119 * rect.width, y: rect.minY + -0.00014 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.00000 * rect.width, y: rect.minY + 0.11106 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.00000 * shapeSize, y: ancor.y + 0.11106 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.11119 * shapeSize, y: ancor.y + 0.22225 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.22239 * shapeSize, y: ancor.y + 0.11106 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.11119 * shapeSize, y: ancor.y + -0.00014 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.00000 * shapeSize, y: ancor.y + 0.11106 * shapeSize))
 		path.close()
 
 			//// Rectangle 7 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.33344 * rect.width, y: rect.minY + 0.44450 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.44464 * rect.width, y: rect.minY + 0.33331 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.33344 * rect.width, y: rect.minY + 0.22211 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.22225 * rect.width, y: rect.minY + 0.33331 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.33344 * rect.width, y: rect.minY + 0.44450 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.33344 * shapeSize, y: ancor.y + 0.44450 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.44464 * shapeSize, y: ancor.y + 0.33331 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.33344 * shapeSize, y: ancor.y + 0.22211 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.22225 * shapeSize, y: ancor.y + 0.33331 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.33344 * shapeSize, y: ancor.y + 0.44450 * shapeSize))
 		path.close()
 	
 			//// Rectangle 19 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.66675 * rect.width, y: rect.minY + 0.77781 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.77794 * rect.width, y: rect.minY + 0.88900 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.88914 * rect.width, y: rect.minY + 0.77781 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.77794 * rect.width, y: rect.minY + 0.66661 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.66675 * rect.width, y: rect.minY + 0.77781 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.66675 * shapeSize, y: ancor.y + 0.77781 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.77794 * shapeSize, y: ancor.y + 0.88900 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.88914 * shapeSize, y: ancor.y + 0.77781 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.77794 * shapeSize, y: ancor.y + 0.66661 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.66675 * shapeSize, y: ancor.y + 0.77781 * shapeSize))
 		path.close()
 
 			//// Rectangle 29 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.55569 * rect.width, y: rect.minY + 0.66675 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.66689 * rect.width, y: rect.minY + 0.55556 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.55569 * rect.width, y: rect.minY + 0.44436 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.44450 * rect.width, y: rect.minY + 0.55556 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.55569 * rect.width, y: rect.minY + 0.66675 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.55569 * shapeSize, y: ancor.y + 0.66675 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.66689 * shapeSize, y: ancor.y + 0.55556 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.55569 * shapeSize, y: ancor.y + 0.44436 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.44450 * shapeSize, y: ancor.y + 0.55556 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.55569 * shapeSize, y: ancor.y + 0.66675 * shapeSize))
 		path.close()
 
 		return Path(path.cgPath)
@@ -58,40 +62,44 @@ struct Grid8fShape2: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		let path = NSBezierPath()
+		let shapeSize = min(rect.width, rect.height)
+		let ancor: CGPoint = rect.width < rect.height
+		? CGPoint(x: 0, y: (rect.height - rect.width) / 2)
+		: CGPoint(x: (rect.width - rect.height) / 2, y: 0)
 		
 			//// Group 2
 			//// Rectangle 3 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.11125 * rect.width, y: rect.minY + 0.22206 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.22244 * rect.width, y: rect.minY + 0.33325 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.33364 * rect.width, y: rect.minY + 0.22206 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.22244 * rect.width, y: rect.minY + 0.11086 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.11125 * rect.width, y: rect.minY + 0.22206 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.11125 * shapeSize, y: ancor.y + 0.22206 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.22244 * shapeSize, y: ancor.y + 0.33325 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.33364 * shapeSize, y: ancor.y + 0.22206 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.22244 * shapeSize, y: ancor.y + 0.11086 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.11125 * shapeSize, y: ancor.y + 0.22206 * shapeSize))
 		path.close()
 		
 		
 			//// Rectangle 21 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.33350 * rect.width, y: rect.minY + 0.88881 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.44469 * rect.width, y: rect.minY + 1.00000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.55589 * rect.width, y: rect.minY + 0.88881 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.44469 * rect.width, y: rect.minY + 0.77761 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.33350 * rect.width, y: rect.minY + 0.88881 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.33350 * shapeSize, y: ancor.y + 0.88881 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.44469 * shapeSize, y: ancor.y + 1.00000 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.55589 * shapeSize, y: ancor.y + 0.88881 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.44469 * shapeSize, y: ancor.y + 0.77761 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.33350 * shapeSize, y: ancor.y + 0.88881 * shapeSize))
 		path.close()
 		
 		
 			//// Rectangle 23 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.55550 * rect.width, y: rect.minY + 0.66656 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.66669 * rect.width, y: rect.minY + 0.77775 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.77789 * rect.width, y: rect.minY + 0.66656 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.66669 * rect.width, y: rect.minY + 0.55536 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.55550 * rect.width, y: rect.minY + 0.66656 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.55550 * shapeSize, y: ancor.y + 0.66656 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.66669 * shapeSize, y: ancor.y + 0.77775 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.77789 * shapeSize, y: ancor.y + 0.66656 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.66669 * shapeSize, y: ancor.y + 0.55536 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.55550 * shapeSize, y: ancor.y + 0.66656 * shapeSize))
 		path.close()
 		
 			//// Rectangle 25 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.77775 * rect.width, y: rect.minY + 0.44431 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.88894 * rect.width, y: rect.minY + 0.55550 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 1.00014 * rect.width, y: rect.minY + 0.44431 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.88894 * rect.width, y: rect.minY + 0.33311 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.77775 * rect.width, y: rect.minY + 0.44431 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.77775 * shapeSize, y: ancor.y + 0.44431 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.88894 * shapeSize, y: ancor.y + 0.55550 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 1.00014 * shapeSize, y: ancor.y + 0.44431 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.88894 * shapeSize, y: ancor.y + 0.33311 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.77775 * shapeSize, y: ancor.y + 0.44431 * shapeSize))
 		path.close()
 		
 		return Path(path.cgPath)
@@ -102,41 +110,45 @@ struct Grid8fShape3: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		let path = NSBezierPath()
+		let shapeSize = min(rect.width, rect.height)
+		let ancor: CGPoint = rect.width < rect.height
+		? CGPoint(x: 0, y: (rect.height - rect.width) / 2)
+		: CGPoint(x: (rect.width - rect.height) / 2, y: 0)
 		
 			//// Group 3
 			//// Rectangle 2 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.22225 * rect.width, y: rect.minY + 0.11106 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.33344 * rect.width, y: rect.minY + 0.22225 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.44464 * rect.width, y: rect.minY + 0.11106 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.33344 * rect.width, y: rect.minY + -0.00014 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.22225 * rect.width, y: rect.minY + 0.11106 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.22225 * shapeSize, y: ancor.y + 0.11106 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.33344 * shapeSize, y: ancor.y + 0.22225 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.44464 * shapeSize, y: ancor.y + 0.11106 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.33344 * shapeSize, y: ancor.y + -0.00014 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.22225 * shapeSize, y: ancor.y + 0.11106 * shapeSize))
 		path.close()
 		
 		
 			//// Rectangle 12 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.44450 * rect.width, y: rect.minY + 0.33331 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.55569 * rect.width, y: rect.minY + 0.44450 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.66689 * rect.width, y: rect.minY + 0.33331 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.55569 * rect.width, y: rect.minY + 0.22211 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.44450 * rect.width, y: rect.minY + 0.33331 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.44450 * shapeSize, y: ancor.y + 0.33331 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.55569 * shapeSize, y: ancor.y + 0.44450 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.66689 * shapeSize, y: ancor.y + 0.33331 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.55569 * shapeSize, y: ancor.y + 0.22211 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.44450 * shapeSize, y: ancor.y + 0.33331 * shapeSize))
 		path.close()
 		
 		
 			//// Rectangle 16 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.00000 * rect.width, y: rect.minY + 0.77781 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.11119 * rect.width, y: rect.minY + 0.88900 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.22239 * rect.width, y: rect.minY + 0.77781 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.11119 * rect.width, y: rect.minY + 0.66661 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.00000 * rect.width, y: rect.minY + 0.77781 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.00000 * shapeSize, y: ancor.y + 0.77781 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.11119 * shapeSize, y: ancor.y + 0.88900 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.22239 * shapeSize, y: ancor.y + 0.77781 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.11119 * shapeSize, y: ancor.y + 0.66661 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.00000 * shapeSize, y: ancor.y + 0.77781 * shapeSize))
 		path.close()
 		
 		
 			//// Rectangle 24 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.66675 * rect.width, y: rect.minY + 0.55556 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.77794 * rect.width, y: rect.minY + 0.66675 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.88914 * rect.width, y: rect.minY + 0.55556 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.77794 * rect.width, y: rect.minY + 0.44436 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.66675 * rect.width, y: rect.minY + 0.55556 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.66675 * shapeSize, y: ancor.y + 0.55556 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.77794 * shapeSize, y: ancor.y + 0.66675 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.88914 * shapeSize, y: ancor.y + 0.55556 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.77794 * shapeSize, y: ancor.y + 0.44436 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.66675 * shapeSize, y: ancor.y + 0.55556 * shapeSize))
 		path.close()
 		
 		return Path(path.cgPath)
@@ -147,41 +159,45 @@ struct Grid8fShape4: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		let path = NSBezierPath()
+		let shapeSize = min(rect.width, rect.height)
+		let ancor: CGPoint = rect.width < rect.height
+		? CGPoint(x: 0, y: (rect.height - rect.width) / 2)
+		: CGPoint(x: (rect.width - rect.height) / 2, y: 0)
 		
 			//// Group 4
 			//// Rectangle 6 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.33350 * rect.width, y: rect.minY + 0.22231 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.44469 * rect.width, y: rect.minY + 0.33350 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.55589 * rect.width, y: rect.minY + 0.22231 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.44469 * rect.width, y: rect.minY + 0.11111 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.33350 * rect.width, y: rect.minY + 0.22231 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.33350 * shapeSize, y: ancor.y + 0.22231 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.44469 * shapeSize, y: ancor.y + 0.33350 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.55589 * shapeSize, y: ancor.y + 0.22231 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.44469 * shapeSize, y: ancor.y + 0.11111 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.33350 * shapeSize, y: ancor.y + 0.22231 * shapeSize))
 		path.close()
 		
 		
 			//// Rectangle 8 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.11125 * rect.width, y: rect.minY + 0.44431 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.22244 * rect.width, y: rect.minY + 0.55550 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.33364 * rect.width, y: rect.minY + 0.44431 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.22244 * rect.width, y: rect.minY + 0.33311 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.11125 * rect.width, y: rect.minY + 0.44431 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.11125 * shapeSize, y: ancor.y + 0.44431 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.22244 * shapeSize, y: ancor.y + 0.55550 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.33364 * shapeSize, y: ancor.y + 0.44431 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.22244 * shapeSize, y: ancor.y + 0.33311 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.11125 * shapeSize, y: ancor.y + 0.44431 * shapeSize))
 		path.close()
 		
 		
 			//// Rectangle 18 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.55550 * rect.width, y: rect.minY + 0.88881 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.66669 * rect.width, y: rect.minY + 1.00000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.77789 * rect.width, y: rect.minY + 0.88881 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.66669 * rect.width, y: rect.minY + 0.77761 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.55550 * rect.width, y: rect.minY + 0.88881 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.55550 * shapeSize, y: ancor.y + 0.88881 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.66669 * shapeSize, y: ancor.y + 1.00000 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.77789 * shapeSize, y: ancor.y + 0.88881 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.66669 * shapeSize, y: ancor.y + 0.77761 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.55550 * shapeSize, y: ancor.y + 0.88881 * shapeSize))
 		path.close()
 		
 		
 			//// Rectangle 20 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.77775 * rect.width, y: rect.minY + 0.66656 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.88894 * rect.width, y: rect.minY + 0.77775 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 1.00014 * rect.width, y: rect.minY + 0.66656 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.88894 * rect.width, y: rect.minY + 0.55536 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.77775 * rect.width, y: rect.minY + 0.66656 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.77775 * shapeSize, y: ancor.y + 0.66656 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.88894 * shapeSize, y: ancor.y + 0.77775 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 1.00014 * shapeSize, y: ancor.y + 0.66656 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.88894 * shapeSize, y: ancor.y + 0.55536 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.77775 * shapeSize, y: ancor.y + 0.66656 * shapeSize))
 		path.close()
 		
 		return Path(path.cgPath)
@@ -192,38 +208,42 @@ struct Grid8fShape5: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		let path = NSBezierPath()
+		let shapeSize = min(rect.width, rect.height)
+		let ancor: CGPoint = rect.width < rect.height
+		? CGPoint(x: 0, y: (rect.height - rect.width) / 2)
+		: CGPoint(x: (rect.width - rect.height) / 2, y: 0)
 		
 			//// Group 5
 			//// Rectangle 5 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.55569 * rect.width, y: rect.minY + 0.22225 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.66689 * rect.width, y: rect.minY + 0.11106 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.55569 * rect.width, y: rect.minY + -0.00014 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.44450 * rect.width, y: rect.minY + 0.11106 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.55569 * rect.width, y: rect.minY + 0.22225 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.55569 * shapeSize, y: ancor.y + 0.22225 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.66689 * shapeSize, y: ancor.y + 0.11106 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.55569 * shapeSize, y: ancor.y + -0.00014 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.44450 * shapeSize, y: ancor.y + 0.11106 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.55569 * shapeSize, y: ancor.y + 0.22225 * shapeSize))
 		path.close()
 		
 			//// Rectangle 9 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.00000 * rect.width, y: rect.minY + 0.55556 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.11119 * rect.width, y: rect.minY + 0.66675 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.22239 * rect.width, y: rect.minY + 0.55556 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.11119 * rect.width, y: rect.minY + 0.44436 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.00000 * rect.width, y: rect.minY + 0.55556 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.00000 * shapeSize, y: ancor.y + 0.55556 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.11119 * shapeSize, y: ancor.y + 0.66675 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.22239 * shapeSize, y: ancor.y + 0.55556 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.11119 * shapeSize, y: ancor.y + 0.44436 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.00000 * shapeSize, y: ancor.y + 0.55556 * shapeSize))
 		path.close()
 		
 			//// Rectangle 27 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.33344 * rect.width, y: rect.minY + 0.88900 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.44464 * rect.width, y: rect.minY + 0.77781 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.33344 * rect.width, y: rect.minY + 0.66661 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.22225 * rect.width, y: rect.minY + 0.77781 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.33344 * rect.width, y: rect.minY + 0.88900 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.33344 * shapeSize, y: ancor.y + 0.88900 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.44464 * shapeSize, y: ancor.y + 0.77781 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.33344 * shapeSize, y: ancor.y + 0.66661 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.22225 * shapeSize, y: ancor.y + 0.77781 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.33344 * shapeSize, y: ancor.y + 0.88900 * shapeSize))
 		path.close()
 		
 			//// Rectangle 31 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.77794 * rect.width, y: rect.minY + 0.44450 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.88914 * rect.width, y: rect.minY + 0.33331 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.77794 * rect.width, y: rect.minY + 0.22211 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.66675 * rect.width, y: rect.minY + 0.33331 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.77794 * rect.width, y: rect.minY + 0.44450 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.77794 * shapeSize, y: ancor.y + 0.44450 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.88914 * shapeSize, y: ancor.y + 0.33331 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.77794 * shapeSize, y: ancor.y + 0.22211 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.66675 * shapeSize, y: ancor.y + 0.33331 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.77794 * shapeSize, y: ancor.y + 0.44450 * shapeSize))
 		path.close()
 		
 		return Path(path.cgPath)
@@ -234,41 +254,45 @@ struct Grid8fShape6: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		let path = NSBezierPath()
+		let shapeSize = min(rect.width, rect.height)
+		let ancor: CGPoint = rect.width < rect.height
+		? CGPoint(x: 0, y: (rect.height - rect.width) / 2)
+		: CGPoint(x: (rect.width - rect.height) / 2, y: 0)
 		
 			//// Group 6
 			//// Rectangle 11 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.66694 * rect.width, y: rect.minY + 0.33325 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.77814 * rect.width, y: rect.minY + 0.22206 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.66694 * rect.width, y: rect.minY + 0.11086 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.55575 * rect.width, y: rect.minY + 0.22206 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.66694 * rect.width, y: rect.minY + 0.33325 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.66694 * shapeSize, y: ancor.y + 0.33325 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.77814 * shapeSize, y: ancor.y + 0.22206 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.66694 * shapeSize, y: ancor.y + 0.11086 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.55575 * shapeSize, y: ancor.y + 0.22206 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.66694 * shapeSize, y: ancor.y + 0.33325 * shapeSize))
 		path.close()
 		
 		
 			//// Rectangle 13 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.33350 * rect.width, y: rect.minY + 0.44456 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.44469 * rect.width, y: rect.minY + 0.55575 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.55589 * rect.width, y: rect.minY + 0.44456 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.44469 * rect.width, y: rect.minY + 0.33336 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.33350 * rect.width, y: rect.minY + 0.44456 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.33350 * shapeSize, y: ancor.y + 0.44456 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.44469 * shapeSize, y: ancor.y + 0.55575 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.55589 * shapeSize, y: ancor.y + 0.44456 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.44469 * shapeSize, y: ancor.y + 0.33336 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.33350 * shapeSize, y: ancor.y + 0.44456 * shapeSize))
 		path.close()
 		
 		
 			//// Rectangle 15 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.11125 * rect.width, y: rect.minY + 0.66656 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.22244 * rect.width, y: rect.minY + 0.77775 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.33364 * rect.width, y: rect.minY + 0.66656 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.22244 * rect.width, y: rect.minY + 0.55536 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.11125 * rect.width, y: rect.minY + 0.66656 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.11125 * shapeSize, y: ancor.y + 0.66656 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.22244 * shapeSize, y: ancor.y + 0.77775 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.33364 * shapeSize, y: ancor.y + 0.66656 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.22244 * shapeSize, y: ancor.y + 0.55536 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.11125 * shapeSize, y: ancor.y + 0.66656 * shapeSize))
 		path.close()
 		
 		
 			//// Rectangle 17 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.88894 * rect.width, y: rect.minY + 1.00000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 1.00014 * rect.width, y: rect.minY + 0.88881 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.88894 * rect.width, y: rect.minY + 0.77761 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.77775 * rect.width, y: rect.minY + 0.88881 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.88894 * rect.width, y: rect.minY + 1.00000 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.88894 * shapeSize, y: ancor.y + 1.00000 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 1.00014 * shapeSize, y: ancor.y + 0.88881 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.88894 * shapeSize, y: ancor.y + 0.77761 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.77775 * shapeSize, y: ancor.y + 0.88881 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.88894 * shapeSize, y: ancor.y + 1.00000 * shapeSize))
 		path.close()
 		
 		return Path(path.cgPath)
@@ -279,38 +303,42 @@ struct Grid8fShape7: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		let path = NSBezierPath()
+		let shapeSize = min(rect.width, rect.height)
+		let ancor: CGPoint = rect.width < rect.height
+		? CGPoint(x: 0, y: (rect.height - rect.width) / 2)
+		: CGPoint(x: (rect.width - rect.height) / 2, y: 0)
 		
 			//// Group 7
 			//// Rectangle 4 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.11119 * rect.width, y: rect.minY + 0.44450 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.22239 * rect.width, y: rect.minY + 0.33331 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.11119 * rect.width, y: rect.minY + 0.22211 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.00000 * rect.width, y: rect.minY + 0.33331 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.11119 * rect.width, y: rect.minY + 0.44450 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.11119 * shapeSize, y: ancor.y + 0.44450 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.22239 * shapeSize, y: ancor.y + 0.33331 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.11119 * shapeSize, y: ancor.y + 0.22211 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.00000 * shapeSize, y: ancor.y + 0.33331 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.11119 * shapeSize, y: ancor.y + 0.44450 * shapeSize))
 		path.close()
 		
 			//// Rectangle 10 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.77794 * rect.width, y: rect.minY + 0.22225 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.88914 * rect.width, y: rect.minY + 0.11106 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.77794 * rect.width, y: rect.minY + -0.00014 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.66675 * rect.width, y: rect.minY + 0.11106 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.77794 * rect.width, y: rect.minY + 0.22225 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.77794 * shapeSize, y: ancor.y + 0.22225 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.88914 * shapeSize, y: ancor.y + 0.11106 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.77794 * shapeSize, y: ancor.y + -0.00014 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.66675 * shapeSize, y: ancor.y + 0.11106 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.77794 * shapeSize, y: ancor.y + 0.22225 * shapeSize))
 		path.close()
 		
 			//// Rectangle 14 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.33344 * rect.width, y: rect.minY + 0.66675 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.44464 * rect.width, y: rect.minY + 0.55556 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.33344 * rect.width, y: rect.minY + 0.44436 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.22225 * rect.width, y: rect.minY + 0.55556 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.33344 * rect.width, y: rect.minY + 0.66675 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.33344 * shapeSize, y: ancor.y + 0.66675 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.44464 * shapeSize, y: ancor.y + 0.55556 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.33344 * shapeSize, y: ancor.y + 0.44436 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.22225 * shapeSize, y: ancor.y + 0.55556 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.33344 * shapeSize, y: ancor.y + 0.66675 * shapeSize))
 		path.close()
 		
 			//// Rectangle 22 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.44450 * rect.width, y: rect.minY + 0.77781 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.55569 * rect.width, y: rect.minY + 0.88900 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.66689 * rect.width, y: rect.minY + 0.77781 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.55569 * rect.width, y: rect.minY + 0.66661 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.44450 * rect.width, y: rect.minY + 0.77781 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.44450 * shapeSize, y: ancor.y + 0.77781 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.55569 * shapeSize, y: ancor.y + 0.88900 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.66689 * shapeSize, y: ancor.y + 0.77781 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.55569 * shapeSize, y: ancor.y + 0.66661 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.44450 * shapeSize, y: ancor.y + 0.77781 * shapeSize))
 		path.close()
 		
 		return Path(path.cgPath)
@@ -321,38 +349,42 @@ struct Grid8fShape8: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		let path = NSBezierPath()
+		let shapeSize = min(rect.width, rect.height)
+		let ancor: CGPoint = rect.width < rect.height
+		? CGPoint(x: 0, y: (rect.height - rect.width) / 2)
+		: CGPoint(x: (rect.width - rect.height) / 2, y: 0)
 		
 			//// Group 8
 			//// Rectangle 26 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.22244 * rect.width, y: rect.minY + 1.00000 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.33364 * rect.width, y: rect.minY + 0.88881 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.22244 * rect.width, y: rect.minY + 0.77761 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.11125 * rect.width, y: rect.minY + 0.88881 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.22244 * rect.width, y: rect.minY + 1.00000 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.22244 * shapeSize, y: ancor.y + 1.00000 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.33364 * shapeSize, y: ancor.y + 0.88881 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.22244 * shapeSize, y: ancor.y + 0.77761 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.11125 * shapeSize, y: ancor.y + 0.88881 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.22244 * shapeSize, y: ancor.y + 1.00000 * shapeSize))
 		path.close()
 		
 			//// Rectangle 28 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.33325 * rect.width, y: rect.minY + 0.66656 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.44444 * rect.width, y: rect.minY + 0.77775 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.55564 * rect.width, y: rect.minY + 0.66656 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.44444 * rect.width, y: rect.minY + 0.55536 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.33325 * rect.width, y: rect.minY + 0.66656 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.33325 * shapeSize, y: ancor.y + 0.66656 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.44444 * shapeSize, y: ancor.y + 0.77775 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.55564 * shapeSize, y: ancor.y + 0.66656 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.44444 * shapeSize, y: ancor.y + 0.55536 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.33325 * shapeSize, y: ancor.y + 0.66656 * shapeSize))
 		path.close()
 		
 			//// Rectangle 30 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.55575 * rect.width, y: rect.minY + 0.44456 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.66694 * rect.width, y: rect.minY + 0.55575 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.77814 * rect.width, y: rect.minY + 0.44456 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.66694 * rect.width, y: rect.minY + 0.33336 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.55575 * rect.width, y: rect.minY + 0.44456 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.55575 * shapeSize, y: ancor.y + 0.44456 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.66694 * shapeSize, y: ancor.y + 0.55575 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.77814 * shapeSize, y: ancor.y + 0.44456 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.66694 * shapeSize, y: ancor.y + 0.33336 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.55575 * shapeSize, y: ancor.y + 0.44456 * shapeSize))
 		path.close()
 		
 			//// Rectangle 32 Drawing
-		path.move(to: NSPoint(x: rect.minX + 0.77275 * rect.width, y: rect.minY + 0.22231 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.88394 * rect.width, y: rect.minY + 0.33350 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.99514 * rect.width, y: rect.minY + 0.22231 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.88394 * rect.width, y: rect.minY + 0.11111 * rect.height))
-		path.line(to: NSPoint(x: rect.minX + 0.77275 * rect.width, y: rect.minY + 0.22231 * rect.height))
+		path.move(to: NSPoint(x: ancor.x + 0.77275 * shapeSize, y: ancor.y + 0.22231 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.88394 * shapeSize, y: ancor.y + 0.33350 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.99514 * shapeSize, y: ancor.y + 0.22231 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.88394 * shapeSize, y: ancor.y + 0.11111 * shapeSize))
+		path.line(to: NSPoint(x: ancor.x + 0.77275 * shapeSize, y: ancor.y + 0.22231 * shapeSize))
 		path.close()
 		
 		return Path(path.cgPath)

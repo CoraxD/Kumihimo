@@ -39,7 +39,6 @@ struct Grid8lView: View {
 					.stroke(.gray, style: StrokeStyle( lineWidth: 3, dash: [6]))
 					.stroke(.white, style: StrokeStyle( lineWidth: 3, dash: [6], dashPhase: 6))
 			}
-			.frame(width: 300, height: 270)
     }
 }
 
