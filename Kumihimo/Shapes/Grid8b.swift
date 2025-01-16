@@ -16,11 +16,7 @@ struct Grid8bShape1: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		var path = Path()
-		let originalRatio: CGFloat = 200.0 / 350.0
-		let aspectRatio: CGFloat = (rect.width / rect.height) / originalRatio
-		let frame: CGRect = aspectRatio > 1.0
-		? CGRect(x: (rect.width - rect.width / aspectRatio) / 2, y: 0, width: rect.width / aspectRatio, height: rect.height)
-		: CGRect(x: 0, y: (rect.height - rect.height * aspectRatio) / 2, width: rect.width, height: rect.height * aspectRatio)
+		let frame: CGRect = rect.fitRect(ratio: 200.0 / 350.0)
 		
 			//// Group 1
 			//// Bezier 1 Drawing
@@ -112,11 +108,7 @@ struct Grid8bShape2: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		var path = Path()
-		let originalRatio: CGFloat = 200.0 / 350.0
-		let aspectRatio: CGFloat = (rect.width / rect.height) / originalRatio
-		let frame: CGRect = aspectRatio > 1.0
-		? CGRect(x: (rect.width - rect.width / aspectRatio) / 2, y: 0, width: rect.width / aspectRatio, height: rect.height)
-		: CGRect(x: 0, y: (rect.height - rect.height * aspectRatio) / 2, width: rect.width, height: rect.height * aspectRatio)
+		let frame: CGRect = rect.fitRect(ratio: 200.0 / 350.0)
 		
 			//// Group 2
 			//// Bezier 5 Drawing
@@ -207,11 +199,7 @@ struct Grid8bShape3: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		var path = Path()
-		let originalRatio: CGFloat = 200.0 / 350.0
-		let aspectRatio: CGFloat = (rect.width / rect.height) / originalRatio
-		let frame: CGRect = aspectRatio > 1.0
-		? CGRect(x: (rect.width - rect.width / aspectRatio) / 2, y: 0, width: rect.width / aspectRatio, height: rect.height)
-		: CGRect(x: 0, y: (rect.height - rect.height * aspectRatio) / 2, width: rect.width, height: rect.height * aspectRatio)
+		let frame: CGRect = rect.fitRect(ratio: 200.0 / 350.0)
 		
 			//// Group 3
 			//// Bezier 3 Drawing
@@ -302,11 +290,7 @@ struct Grid8bShape4: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		var path = Path()
-		let originalRatio: CGFloat = 200.0 / 350.0
-		let aspectRatio: CGFloat = (rect.width / rect.height) / originalRatio
-		let frame: CGRect = aspectRatio > 1.0
-		? CGRect(x: (rect.width - rect.width / aspectRatio) / 2, y: 0, width: rect.width / aspectRatio, height: rect.height)
-		: CGRect(x: 0, y: (rect.height - rect.height * aspectRatio) / 2, width: rect.width, height: rect.height * aspectRatio)
+		let frame: CGRect = rect.fitRect(ratio: 200.0 / 350.0)
 		
 			//// Group 4
 			//// Bezier 7 Drawing
@@ -397,11 +381,7 @@ struct Grid8bShape5: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		var path = Path()
-		let originalRatio: CGFloat = 200.0 / 350.0
-		let aspectRatio: CGFloat = (rect.width / rect.height) / originalRatio
-		let frame: CGRect = aspectRatio > 1.0
-		? CGRect(x: (rect.width - rect.width / aspectRatio) / 2, y: 0, width: rect.width / aspectRatio, height: rect.height)
-		: CGRect(x: 0, y: (rect.height - rect.height * aspectRatio) / 2, width: rect.width, height: rect.height * aspectRatio)
+		let frame: CGRect = rect.fitRect(ratio: 200.0 / 350.0)
 		
 			//// Group 5
 			//// Bezier 9 Drawing
@@ -492,11 +472,7 @@ struct Grid8bShape6: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		var path = Path()
-		let originalRatio: CGFloat = 200.0 / 350.0
-		let aspectRatio: CGFloat = (rect.width / rect.height) / originalRatio
-		let frame: CGRect = aspectRatio > 1.0
-		? CGRect(x: (rect.width - rect.width / aspectRatio) / 2, y: 0, width: rect.width / aspectRatio, height: rect.height)
-		: CGRect(x: 0, y: (rect.height - rect.height * aspectRatio) / 2, width: rect.width, height: rect.height * aspectRatio)
+		let frame: CGRect = rect.fitRect(ratio: 200.0 / 350.0)
 		
 			//// Group 6
 			//// Bezier 13 Drawing
@@ -587,11 +563,7 @@ struct Grid8bShape7: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		var path = Path()
-		let originalRatio: CGFloat = 200.0 / 350.0
-		let aspectRatio: CGFloat = (rect.width / rect.height) / originalRatio
-		let frame: CGRect = aspectRatio > 1.0
-		? CGRect(x: (rect.width - rect.width / aspectRatio) / 2, y: 0, width: rect.width / aspectRatio, height: rect.height)
-		: CGRect(x: 0, y: (rect.height - rect.height * aspectRatio) / 2, width: rect.width, height: rect.height * aspectRatio)
+		let frame: CGRect = rect.fitRect(ratio: 200.0 / 350.0)
 		
 			//// Group 7
 			//// Bezier 11 Drawing
@@ -682,11 +654,7 @@ struct Grid8bShape8: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		var path = Path()
-		let originalRatio: CGFloat = 200.0 / 350.0
-		let aspectRatio: CGFloat = (rect.width / rect.height) / originalRatio
-		let frame: CGRect = aspectRatio > 1.0
-		? CGRect(x: (rect.width - rect.width / aspectRatio) / 2, y: 0, width: rect.width / aspectRatio, height: rect.height)
-		: CGRect(x: 0, y: (rect.height - rect.height * aspectRatio) / 2, width: rect.width, height: rect.height * aspectRatio)
+		let frame: CGRect = rect.fitRect(ratio: 200.0 / 350.0)
 
 			//// Group 8
 			//// Bezier 2 Drawing
