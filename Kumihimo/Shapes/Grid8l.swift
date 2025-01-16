@@ -16,38 +16,33 @@ struct Grid8lShape1: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		var path = Path()
-		let shapeSize = rect.width < rect.height * 1.1
-		? rect.width
-		: rect.height
-		let ancor: CGPoint = rect.width < rect.height * 1.1
-		? CGPoint(x: 0, y: (rect.height - rect.width) / 2)
-		: CGPoint(x: (rect.width - rect.height) / 2, y: 0)
+		let frame: CGRect = rect.fitRect(ratio: 1.05)
 		
 			//// Group 1
 			//// Rectangle 2 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.00000 * shapeSize, y: ancor.y + 0.35593 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.07654 * shapeSize, y: ancor.y + 0.43248 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.22946 * shapeSize, y: ancor.y + 0.27957 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.15291 * shapeSize, y: ancor.y + 0.20302 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.00000 * shapeSize, y: ancor.y + 0.35593 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.00000 * frame.width, y: frame.minY + 0.35593 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.07654 * frame.width, y: frame.minY + 0.43248 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.22946 * frame.width, y: frame.minY + 0.27957 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.15291 * frame.width, y: frame.minY + 0.20302 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.00000 * frame.width, y: frame.minY + 0.35593 * frame.height))
 		path.closeSubpath()
 		
 		
 			//// Bezier 2 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.42060 * shapeSize, y: ancor.y + 0.16487 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.30590 * shapeSize, y: ancor.y + 0.20311 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.22942 * shapeSize, y: ancor.y + 0.12664 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.38237 * shapeSize, y: ancor.y + 0.12664 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.42060 * shapeSize, y: ancor.y + 0.16487 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.42060 * frame.width, y: frame.minY + 0.16487 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.30590 * frame.width, y: frame.minY + 0.20311 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.22942 * frame.width, y: frame.minY + 0.12664 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.38237 * frame.width, y: frame.minY + 0.12664 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.42060 * frame.width, y: frame.minY + 0.16487 * frame.height))
 		path.closeSubpath()
 		
 		
 			//// Rectangle 14 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.38225 * shapeSize, y: ancor.y + 0.58557 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.53516 * shapeSize, y: ancor.y + 0.73848 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.61171 * shapeSize, y: ancor.y + 0.66193 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.45879 * shapeSize, y: ancor.y + 0.50902 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.38225 * shapeSize, y: ancor.y + 0.58557 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.38225 * frame.width, y: frame.minY + 0.58557 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.53516 * frame.width, y: frame.minY + 0.73848 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.61171 * frame.width, y: frame.minY + 0.66193 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.45879 * frame.width, y: frame.minY + 0.50902 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.38225 * frame.width, y: frame.minY + 0.58557 * frame.height))
 		path.closeSubpath()
 		
 		return path
@@ -58,38 +53,33 @@ struct Grid8lShape2: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		var path = Path()
-		let shapeSize = rect.width < rect.height * 1.1
-		? rect.width
-		: rect.height
-		let ancor: CGPoint = rect.width < rect.height * 1.1
-		? CGPoint(x: 0, y: (rect.height - rect.width) / 2)
-		: CGPoint(x: (rect.width - rect.height) / 2, y: 0)
+		let frame: CGRect = rect.fitRect(ratio: 1.05)
 		
 			//// Group 2
 			//// Rectangle 4 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.38225 * shapeSize, y: ancor.y + 0.27957 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.53516 * shapeSize, y: ancor.y + 0.43248 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.61171 * shapeSize, y: ancor.y + 0.35593 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.45879 * shapeSize, y: ancor.y + 0.20302 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.38225 * shapeSize, y: ancor.y + 0.27957 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.38225 * frame.width, y: frame.minY + 0.27957 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.53516 * frame.width, y: frame.minY + 0.43248 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.61171 * frame.width, y: frame.minY + 0.35593 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.45879 * frame.width, y: frame.minY + 0.20302 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.38225 * frame.width, y: frame.minY + 0.27957 * frame.height))
 		path.closeSubpath()
 		
 		
 			//// Rectangle 12 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.00000 * shapeSize, y: ancor.y + 0.66193 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.07654 * shapeSize, y: ancor.y + 0.73848 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.22946 * shapeSize, y: ancor.y + 0.58557 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.15291 * shapeSize, y: ancor.y + 0.50902 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.00000 * shapeSize, y: ancor.y + 0.66193 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.00000 * frame.width, y: frame.minY + 0.66193 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.07654 * frame.width, y: frame.minY + 0.73848 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.22946 * frame.width, y: frame.minY + 0.58557 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.15291 * frame.width, y: frame.minY + 0.50902 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.00000 * frame.width, y: frame.minY + 0.66193 * frame.height))
 		path.closeSubpath()
 		
 		
 			//// Bezier 6 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.42060 * shapeSize, y: ancor.y + 0.47076 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.30590 * shapeSize, y: ancor.y + 0.50899 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.22942 * shapeSize, y: ancor.y + 0.43252 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.38237 * shapeSize, y: ancor.y + 0.43252 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.42060 * shapeSize, y: ancor.y + 0.47076 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.42060 * frame.width, y: frame.minY + 0.47076 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.30590 * frame.width, y: frame.minY + 0.50899 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.22942 * frame.width, y: frame.minY + 0.43252 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.38237 * frame.width, y: frame.minY + 0.43252 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.42060 * frame.width, y: frame.minY + 0.47076 * frame.height))
 		path.closeSubpath()
 		
 		return path
@@ -100,48 +90,43 @@ struct Grid8lShape3: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		var path = Path()
-		let shapeSize = rect.width < rect.height * 1.1
-		? rect.width
-		: rect.height
-		let ancor: CGPoint = rect.width < rect.height * 1.1
-		? CGPoint(x: 0, y: (rect.height - rect.width) / 2)
-		: CGPoint(x: (rect.width - rect.height) / 2, y: 0)
+		let frame: CGRect = rect.fitRect(ratio: 1.05)
 		
 			//// Group 3
 			//// Rectangle 5 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.76475 * shapeSize, y: ancor.y + 0.20307 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.91766 * shapeSize, y: ancor.y + 0.35598 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.99421 * shapeSize, y: ancor.y + 0.27943 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.84129 * shapeSize, y: ancor.y + 0.12652 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.76475 * shapeSize, y: ancor.y + 0.20307 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.76475 * frame.width, y: frame.minY + 0.20307 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.91766 * frame.width, y: frame.minY + 0.35598 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.99421 * frame.width, y: frame.minY + 0.27943 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.84129 * frame.width, y: frame.minY + 0.12652 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.76475 * frame.width, y: frame.minY + 0.20307 * frame.height))
 		path.closeSubpath()
 		
 		
 			//// Rectangle 6 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.15293 * shapeSize, y: ancor.y + 0.35600 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.22948 * shapeSize, y: ancor.y + 0.43254 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.30602 * shapeSize, y: ancor.y + 0.35600 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.22948 * shapeSize, y: ancor.y + 0.27946 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.15293 * shapeSize, y: ancor.y + 0.35600 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.15293 * frame.width, y: frame.minY + 0.35600 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.22948 * frame.width, y: frame.minY + 0.43254 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.30602 * frame.width, y: frame.minY + 0.35600 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.22948 * frame.width, y: frame.minY + 0.27946 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.15293 * frame.width, y: frame.minY + 0.35600 * frame.height))
 		path.closeSubpath()
 		
 		
 			//// Rectangle 13 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.53523 * shapeSize, y: ancor.y + 0.58546 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.61177 * shapeSize, y: ancor.y + 0.66200 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.84123 * shapeSize, y: ancor.y + 0.43254 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.76468 * shapeSize, y: ancor.y + 0.35600 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.53523 * shapeSize, y: ancor.y + 0.58546 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.53523 * frame.width, y: frame.minY + 0.58546 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.61177 * frame.width, y: frame.minY + 0.66200 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.84123 * frame.width, y: frame.minY + 0.43254 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.76468 * frame.width, y: frame.minY + 0.35600 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.53523 * frame.width, y: frame.minY + 0.58546 * frame.height))
 		path.closeSubpath()
 		
 		
 			//// Bezier 7 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.45884 * shapeSize, y: ancor.y + 0.66194 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.38237 * shapeSize, y: ancor.y + 0.73841 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.22943 * shapeSize, y: ancor.y + 0.73841 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.30590 * shapeSize, y: ancor.y + 0.66194 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.42061 * shapeSize, y: ancor.y + 0.62370 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.45884 * shapeSize, y: ancor.y + 0.66194 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.45884 * frame.width, y: frame.minY + 0.66194 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.38237 * frame.width, y: frame.minY + 0.73841 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.22943 * frame.width, y: frame.minY + 0.73841 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.30590 * frame.width, y: frame.minY + 0.66194 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.42061 * frame.width, y: frame.minY + 0.62370 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.45884 * frame.width, y: frame.minY + 0.66194 * frame.height))
 		path.closeSubpath()
 		
 		return Path(path.cgPath)
@@ -152,38 +137,33 @@ struct Grid8lShape4: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		var path = Path()
-		let shapeSize = rect.width < rect.height * 1.1
-		? rect.width
-		: rect.height
-		let ancor: CGPoint = rect.width < rect.height * 1.1
-		? CGPoint(x: 0, y: (rect.height - rect.width) / 2)
-		: CGPoint(x: (rect.width - rect.height) / 2, y: 0)
+		let frame: CGRect = rect.fitRect(ratio: 1.05)
 		
 			//// Group 4
 			//// Rectangle 9 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.38225 * shapeSize, y: ancor.y + 0.43257 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.53516 * shapeSize, y: ancor.y + 0.58548 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.61171 * shapeSize, y: ancor.y + 0.50893 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.45879 * shapeSize, y: ancor.y + 0.35602 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.38225 * shapeSize, y: ancor.y + 0.43257 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.38225 * frame.width, y: frame.minY + 0.43257 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.53516 * frame.width, y: frame.minY + 0.58548 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.61171 * frame.width, y: frame.minY + 0.50893 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.45879 * frame.width, y: frame.minY + 0.35602 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.38225 * frame.width, y: frame.minY + 0.43257 * frame.height))
 		path.closeSubpath()
 		
 		
 			//// Rectangle 17 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.00000 * shapeSize, y: ancor.y + 0.81493 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.07654 * shapeSize, y: ancor.y + 0.89148 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.22946 * shapeSize, y: ancor.y + 0.73857 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.15291 * shapeSize, y: ancor.y + 0.66202 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.00000 * shapeSize, y: ancor.y + 0.81493 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.00000 * frame.width, y: frame.minY + 0.81493 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.07654 * frame.width, y: frame.minY + 0.89148 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.22946 * frame.width, y: frame.minY + 0.73857 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.15291 * frame.width, y: frame.minY + 0.66202 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.00000 * frame.width, y: frame.minY + 0.81493 * frame.height))
 		path.closeSubpath()
 		
 		
 			//// Bezier 8 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.42060 * shapeSize, y: ancor.y + 0.62370 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.30590 * shapeSize, y: ancor.y + 0.66194 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.22942 * shapeSize, y: ancor.y + 0.58547 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.38237 * shapeSize, y: ancor.y + 0.58547 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.42060 * shapeSize, y: ancor.y + 0.62370 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.42060 * frame.width, y: frame.minY + 0.62370 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.30590 * frame.width, y: frame.minY + 0.66194 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.22942 * frame.width, y: frame.minY + 0.58547 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.38237 * frame.width, y: frame.minY + 0.58547 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.42060 * frame.width, y: frame.minY + 0.62370 * frame.height))
 		path.closeSubpath()
 		
 		return Path(path.cgPath)
@@ -194,48 +174,43 @@ struct Grid8lShape5: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		var path = Path()
-		let shapeSize = rect.width < rect.height * 1.1
-		? rect.width
-		: rect.height
-		let ancor: CGPoint = rect.width < rect.height * 1.1
-		? CGPoint(x: 0, y: (rect.height - rect.width) / 2)
-		: CGPoint(x: (rect.width - rect.height) / 2, y: 0)
+		let frame: CGRect = rect.fitRect(ratio: 1.05)
 		
 			//// Group 5
 			//// Rectangle 1 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.15293 * shapeSize, y: ancor.y + 0.20300 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.22948 * shapeSize, y: ancor.y + 0.27954 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.30602 * shapeSize, y: ancor.y + 0.20300 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.22948 * shapeSize, y: ancor.y + 0.12646 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.15293 * shapeSize, y: ancor.y + 0.20300 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.15293 * frame.width, y: frame.minY + 0.20300 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.22948 * frame.width, y: frame.minY + 0.27954 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.30602 * frame.width, y: frame.minY + 0.20300 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.22948 * frame.width, y: frame.minY + 0.12646 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.15293 * frame.width, y: frame.minY + 0.20300 * frame.height))
 		path.closeSubpath()
 		
 		
 			//// Rectangle 8 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.53523 * shapeSize, y: ancor.y + 0.43246 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.61177 * shapeSize, y: ancor.y + 0.50900 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.84123 * shapeSize, y: ancor.y + 0.27954 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.76468 * shapeSize, y: ancor.y + 0.20300 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.53523 * shapeSize, y: ancor.y + 0.43246 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.53523 * frame.width, y: frame.minY + 0.43246 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.61177 * frame.width, y: frame.minY + 0.50900 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.84123 * frame.width, y: frame.minY + 0.27954 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.76468 * frame.width, y: frame.minY + 0.20300 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.53523 * frame.width, y: frame.minY + 0.43246 * frame.height))
 		path.closeSubpath()
 		
 		
 			//// Bezier 5 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.45884 * shapeSize, y: ancor.y + 0.50899 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.38237 * shapeSize, y: ancor.y + 0.58546 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.22943 * shapeSize, y: ancor.y + 0.58546 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.30590 * shapeSize, y: ancor.y + 0.50899 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.42061 * shapeSize, y: ancor.y + 0.47076 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.45884 * shapeSize, y: ancor.y + 0.50899 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.45884 * frame.width, y: frame.minY + 0.50899 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.38237 * frame.width, y: frame.minY + 0.58546 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.22943 * frame.width, y: frame.minY + 0.58546 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.30590 * frame.width, y: frame.minY + 0.50899 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.42061 * frame.width, y: frame.minY + 0.47076 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.45884 * frame.width, y: frame.minY + 0.50899 * frame.height))
 		path.closeSubpath()
 		
 		
 			//// Rectangle 20 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.76475 * shapeSize, y: ancor.y + 0.66207 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.91766 * shapeSize, y: ancor.y + 0.81498 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.99421 * shapeSize, y: ancor.y + 0.73843 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.84129 * shapeSize, y: ancor.y + 0.58552 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.76475 * shapeSize, y: ancor.y + 0.66207 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.76475 * frame.width, y: frame.minY + 0.66207 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.91766 * frame.width, y: frame.minY + 0.81498 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.99421 * frame.width, y: frame.minY + 0.73843 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.84129 * frame.width, y: frame.minY + 0.58552 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.76475 * frame.width, y: frame.minY + 0.66207 * frame.height))
 		path.closeSubpath()
 		
 		return path
@@ -246,48 +221,43 @@ struct Grid8lShape6: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		var path = Path()
-		let shapeSize = rect.width < rect.height * 1.1
-		? rect.width
-		: rect.height
-		let ancor: CGPoint = rect.width < rect.height * 1.1
-		? CGPoint(x: 0, y: (rect.height - rect.width) / 2)
-		: CGPoint(x: (rect.width - rect.height) / 2, y: 0)
+		let frame: CGRect = rect.fitRect(ratio: 1.05)
 		
 			//// Group 6
 			//// Bezier 1 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.45884 * shapeSize, y: ancor.y + 0.20311 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.38237 * shapeSize, y: ancor.y + 0.27958 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.22943 * shapeSize, y: ancor.y + 0.27958 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.30590 * shapeSize, y: ancor.y + 0.20311 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.42061 * shapeSize, y: ancor.y + 0.16487 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.45884 * shapeSize, y: ancor.y + 0.20311 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.45884 * frame.width, y: frame.minY + 0.20311 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.38237 * frame.width, y: frame.minY + 0.27958 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.22943 * frame.width, y: frame.minY + 0.27958 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.30590 * frame.width, y: frame.minY + 0.20311 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.42061 * frame.width, y: frame.minY + 0.16487 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.45884 * frame.width, y: frame.minY + 0.20311 * frame.height))
 		path.closeSubpath()
 		
 		
 			//// Rectangle 10 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.76475 * shapeSize, y: ancor.y + 0.35607 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.91766 * shapeSize, y: ancor.y + 0.50898 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.99421 * shapeSize, y: ancor.y + 0.43243 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.84129 * shapeSize, y: ancor.y + 0.27952 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.76475 * shapeSize, y: ancor.y + 0.35607 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.76475 * frame.width, y: frame.minY + 0.35607 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.91766 * frame.width, y: frame.minY + 0.50898 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.99421 * frame.width, y: frame.minY + 0.43243 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.84129 * frame.width, y: frame.minY + 0.27952 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.76475 * frame.width, y: frame.minY + 0.35607 * frame.height))
 		path.closeSubpath()
 		
 		
 			//// Rectangle 11 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.15293 * shapeSize, y: ancor.y + 0.50900 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.22948 * shapeSize, y: ancor.y + 0.58554 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.30602 * shapeSize, y: ancor.y + 0.50900 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.22948 * shapeSize, y: ancor.y + 0.43246 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.15293 * shapeSize, y: ancor.y + 0.50900 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.15293 * frame.width, y: frame.minY + 0.50900 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.22948 * frame.width, y: frame.minY + 0.58554 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.30602 * frame.width, y: frame.minY + 0.50900 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.22948 * frame.width, y: frame.minY + 0.43246 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.15293 * frame.width, y: frame.minY + 0.50900 * frame.height))
 		path.closeSubpath()
 		
 		
 			//// Rectangle 18 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.53523 * shapeSize, y: ancor.y + 0.73846 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.61177 * shapeSize, y: ancor.y + 0.81500 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.84123 * shapeSize, y: ancor.y + 0.58554 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.76468 * shapeSize, y: ancor.y + 0.50900 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.53523 * shapeSize, y: ancor.y + 0.73846 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.53523 * frame.width, y: frame.minY + 0.73846 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.61177 * frame.width, y: frame.minY + 0.81500 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.84123 * frame.width, y: frame.minY + 0.58554 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.76468 * frame.width, y: frame.minY + 0.50900 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.53523 * frame.width, y: frame.minY + 0.73846 * frame.height))
 		path.closeSubpath()
 		
 		return Path(path.cgPath)
@@ -298,38 +268,33 @@ struct Grid8lShape7: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		var path = Path()
-		let shapeSize = rect.width < rect.height * 1.1
-		? rect.width
-		: rect.height
-		let ancor: CGPoint = rect.width < rect.height * 1.1
-		? CGPoint(x: 0, y: (rect.height - rect.width) / 2)
-		: CGPoint(x: (rect.width - rect.height) / 2, y: 0)
+		let frame: CGRect = rect.fitRect(ratio: 1.05)
 		
 			//// Group 7
 			//// Rectangle 7 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.00000 * shapeSize, y: ancor.y + 0.50893 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.07654 * shapeSize, y: ancor.y + 0.58548 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.22946 * shapeSize, y: ancor.y + 0.43257 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.15291 * shapeSize, y: ancor.y + 0.35602 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.00000 * shapeSize, y: ancor.y + 0.50893 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.00000 * frame.width, y: frame.minY + 0.50893 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.07654 * frame.width, y: frame.minY + 0.58548 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.22946 * frame.width, y: frame.minY + 0.43257 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.15291 * frame.width, y: frame.minY + 0.35602 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.00000 * frame.width, y: frame.minY + 0.50893 * frame.height))
 		path.closeSubpath()
 		
 		
 			//// Bezier 4 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.42060 * shapeSize, y: ancor.y + 0.31782 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.30590 * shapeSize, y: ancor.y + 0.35605 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.22942 * shapeSize, y: ancor.y + 0.27958 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.38237 * shapeSize, y: ancor.y + 0.27958 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.42060 * shapeSize, y: ancor.y + 0.31782 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.42060 * frame.width, y: frame.minY + 0.31782 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.30590 * frame.width, y: frame.minY + 0.35605 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.22942 * frame.width, y: frame.minY + 0.27958 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.38237 * frame.width, y: frame.minY + 0.27958 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.42060 * frame.width, y: frame.minY + 0.31782 * frame.height))
 		path.closeSubpath()
 		
 		
 			//// Rectangle 19 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.38225 * shapeSize, y: ancor.y + 0.73857 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.53516 * shapeSize, y: ancor.y + 0.89148 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.61171 * shapeSize, y: ancor.y + 0.81493 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.45879 * shapeSize, y: ancor.y + 0.66202 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.38225 * shapeSize, y: ancor.y + 0.73857 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.38225 * frame.width, y: frame.minY + 0.73857 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.53516 * frame.width, y: frame.minY + 0.89148 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.61171 * frame.width, y: frame.minY + 0.81493 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.45879 * frame.width, y: frame.minY + 0.66202 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.38225 * frame.width, y: frame.minY + 0.73857 * frame.height))
 		path.closeSubpath()
 		
 		return Path(path.cgPath)
@@ -340,48 +305,43 @@ struct Grid8lShape8: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		var path = Path()
-		let shapeSize = rect.width < rect.height * 1.1
-		? rect.width
-		: rect.height
-		let ancor: CGPoint = rect.width < rect.height * 1.1
-		? CGPoint(x: 0, y: (rect.height - rect.width) / 2)
-		: CGPoint(x: (rect.width - rect.height) / 2, y: 0)
+		let frame: CGRect = rect.fitRect(ratio: 1.05)
 		
 			//// Group 8
 			//// Rectangle 3 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.53523 * shapeSize, y: ancor.y + 0.27946 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.61177 * shapeSize, y: ancor.y + 0.35600 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.84123 * shapeSize, y: ancor.y + 0.12654 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.76468 * shapeSize, y: ancor.y + 0.05000 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.53523 * shapeSize, y: ancor.y + 0.27946 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.53523 * frame.width, y: frame.minY + 0.27946 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.61177 * frame.width, y: frame.minY + 0.35600 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.84123 * frame.width, y: frame.minY + 0.12654 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.76468 * frame.width, y: frame.minY + 0.05000 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.53523 * frame.width, y: frame.minY + 0.27946 * frame.height))
 		path.closeSubpath()
 		
 		
 			//// Bezier 3 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.45884 * shapeSize, y: ancor.y + 0.35605 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.38237 * shapeSize, y: ancor.y + 0.43252 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.22943 * shapeSize, y: ancor.y + 0.43252 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.30590 * shapeSize, y: ancor.y + 0.35605 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.42061 * shapeSize, y: ancor.y + 0.31782 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.45884 * shapeSize, y: ancor.y + 0.35605 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.45884 * frame.width, y: frame.minY + 0.35605 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.38237 * frame.width, y: frame.minY + 0.43252 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.22943 * frame.width, y: frame.minY + 0.43252 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.30590 * frame.width, y: frame.minY + 0.35605 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.42061 * frame.width, y: frame.minY + 0.31782 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.45884 * frame.width, y: frame.minY + 0.35605 * frame.height))
 		path.closeSubpath()
 		
 		
 			//// Rectangle 15 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.76475 * shapeSize, y: ancor.y + 0.50907 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.91766 * shapeSize, y: ancor.y + 0.66198 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.99421 * shapeSize, y: ancor.y + 0.58543 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.84129 * shapeSize, y: ancor.y + 0.43252 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.76475 * shapeSize, y: ancor.y + 0.50907 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.76475 * frame.width, y: frame.minY + 0.50907 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.91766 * frame.width, y: frame.minY + 0.66198 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.99421 * frame.width, y: frame.minY + 0.58543 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.84129 * frame.width, y: frame.minY + 0.43252 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.76475 * frame.width, y: frame.minY + 0.50907 * frame.height))
 		path.closeSubpath()
 		
 		
 			//// Rectangle 16 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.15293 * shapeSize, y: ancor.y + 0.66200 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.22948 * shapeSize, y: ancor.y + 0.73854 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.30602 * shapeSize, y: ancor.y + 0.66200 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.22948 * shapeSize, y: ancor.y + 0.58546 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.15293 * shapeSize, y: ancor.y + 0.66200 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.15293 * frame.width, y: frame.minY + 0.66200 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.22948 * frame.width, y: frame.minY + 0.73854 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.30602 * frame.width, y: frame.minY + 0.66200 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.22948 * frame.width, y: frame.minY + 0.58546 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.15293 * frame.width, y: frame.minY + 0.66200 * frame.height))
 		path.closeSubpath()
 		
 		return path
@@ -393,22 +353,17 @@ struct Grid8lLine: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		var path = Path()
-		let shapeSize = rect.width < rect.height * 1.1
-		? rect.width
-		: rect.height
-		let ancor: CGPoint = rect.width < rect.height * 1.1
-		? CGPoint(x: 0, y: (rect.height - rect.width) / 2)
-		: CGPoint(x: (rect.width - rect.height) / 2, y: 0)
+		let frame: CGRect = rect.fitRect(ratio: 1.05)
 		
 			//// Group 9
 			//// Bezier 9 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.07648 * shapeSize, y: ancor.y + 0.18120 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.07648 * shapeSize, y: ancor.y + 0.94825 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.07648 * frame.width, y: frame.minY + 0.18120 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.07648 * frame.width, y: frame.minY + 0.94825 * frame.height))
 		
 		
 			//// Bezier 10 Drawing
-		path.move(to: CGPoint(x: ancor.x + 0.53531 * shapeSize, y: ancor.y + 0.18120 * shapeSize))
-		path.addLine(to: CGPoint(x: ancor.x + 0.53531 * shapeSize, y: ancor.y + 0.94825 * shapeSize))
+		path.move(to: CGPoint(x: frame.minX + 0.53531 * frame.width, y: frame.minY + 0.18120 * frame.height))
+		path.addLine(to: CGPoint(x: frame.minX + 0.53531 * frame.width, y: frame.minY + 0.94825 * frame.height))
 		
 		return Path(path.cgPath)
 	}
