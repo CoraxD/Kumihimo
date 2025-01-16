@@ -59,7 +59,7 @@ struct ContentView: View {
 			}
 			.padding()
 		}
-		.frame(minWidth: 600, minHeight: 500)
+		.frame(minWidth: 600, minHeight: 450)
 		.onAppear {
 			braidStorage.loadBraids()
 		}
