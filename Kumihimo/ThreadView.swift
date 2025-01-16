@@ -16,7 +16,7 @@ struct ThreadView: View {
 		ZStack {
 			Circle()
 				.fill(colors[number] ?? .white)
-				.stroke(activeThread.contains(number) ? .gray : .black)
+				.stroke(activeThread.contains(number) ? .red : .black)
 				.frame(width: 20)
 			Text("\(number)")
 				.foregroundStyle(colors[number]?.contrastColor() ?? .black)
