@@ -24,7 +24,7 @@ struct Grid4aView: View {
 					.fill(braidStorage.colors[4] ?? .white)
 					.stroke(.black)
 			}
-			.padding(30)
+			.padding(40)
     }
 }
 
