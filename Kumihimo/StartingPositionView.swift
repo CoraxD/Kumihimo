@@ -23,7 +23,7 @@ struct StartingPositionView: View {
 					Circle()
 						.offset()
 						.fill(Color(white: 0.8))
-						.stroke(.black)
+						.stroke(.black, lineWidth: 1.5)
 						.padding(35)
 						.onTapGesture {
 							braidStorage.activeThread = []
