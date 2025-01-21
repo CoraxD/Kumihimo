@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SchemaView: View {
+struct SchemeView: View {
 	@EnvironmentObject var braidStorage: BraidStorage
 	
 	var body: some View {
@@ -23,6 +23,6 @@ struct SchemaView: View {
 }
 
 #Preview {
-	SchemaView()
+	SchemeView()
 		.environmentObject(BraidStorage())
 }

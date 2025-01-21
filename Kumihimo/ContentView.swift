@@ -38,7 +38,7 @@ struct ContentView: View {
 				if showGrid {
 					GridView()
 				} else {
-					SchemaView()
+					SchemeView()
 				}
 				Spacer()
 				HStack {
@@ -48,7 +48,7 @@ struct ContentView: View {
 					}
 					.disabled(showGrid)
 					Spacer()
-					Button("Show Schema", systemImage: "timelapse")
+					Button("Show Scheme", systemImage: "timelapse")
 					{
 						showGrid = false
 					}
