@@ -15,6 +15,8 @@ enum StartingPosition: String, Codable {
 	case octo16
 	case cross16
 	case line16
+	case crossline16
+	case crossocto16
 	
 	func positionArray() -> [Thread] {
 		switch self {
@@ -85,6 +87,40 @@ enum StartingPosition: String, Codable {
 							Thread(number: 15, position: CGPoint(x: -1.0, y: -0.15)),
 							Thread(number: 16, position: CGPoint(x: -0.9, y: -0.45))]
 		case .line16:
+			return [Thread(number: 1, position: CGPoint(x: -0.88, y: -0.6)),
+							Thread(number: 2, position: CGPoint(x: -0.66, y: -0.79)),
+							Thread(number: 3, position: CGPoint(x: -0.41, y: -0.92)),
+							Thread(number: 4, position: CGPoint(x: -0.14, y: -1.0)),
+							Thread(number: 5, position: CGPoint(x: 0.14, y: -1.0)),
+							Thread(number: 6, position: CGPoint(x: 0.41, y: -0.92)),
+							Thread(number: 7, position: CGPoint(x: 0.66, y: -0.79)),
+							Thread(number: 8, position: CGPoint(x: 0.88, y: -0.6)),
+							Thread(number: 9, position: CGPoint(x: 0.88, y: 0.6)),
+							Thread(number: 10, position: CGPoint(x: 0.66, y: 0.79)),
+							Thread(number: 11, position: CGPoint(x: 0.41, y: 0.92)),
+							Thread(number: 12, position: CGPoint(x: 0.14, y: 1.0)),
+							Thread(number: 13, position: CGPoint(x: -0.14, y: 1.0)),
+							Thread(number: 14, position: CGPoint(x: -0.41, y: 0.92)),
+							Thread(number: 15, position: CGPoint(x: -0.66, y: 0.79)),
+							Thread(number: 16, position: CGPoint(x: -0.88, y: 0.6))]
+		case .crossline16:
+			return [Thread(number: 1, position: CGPoint(x: -0.66, y: -0.79)),
+							Thread(number: 2, position: CGPoint(x: -0.41, y: -0.92)),
+							Thread(number: 3, position: CGPoint(x: -0.14, y: -1.0)),
+							Thread(number: 4, position: CGPoint(x: 0.14, y: -1.0)),
+							Thread(number: 5, position: CGPoint(x: 0.41, y: -0.92)),
+							Thread(number: 6, position: CGPoint(x: 0.66, y: -0.79)),
+							Thread(number: 7, position: CGPoint(x: 1.0, y: -0.15)),
+							Thread(number: 8, position: CGPoint(x: 1.0, y: 0.15)),
+							Thread(number: 9, position: CGPoint(x: 0.66, y: 0.79)),
+							Thread(number: 10, position: CGPoint(x: 0.41, y: 0.92)),
+							Thread(number: 11, position: CGPoint(x: 0.14, y: 1.0)),
+							Thread(number: 12, position: CGPoint(x: -0.14, y: 1.0)),
+							Thread(number: 13, position: CGPoint(x: -0.41, y: 0.92)),
+							Thread(number: 14, position: CGPoint(x: -0.66, y: 0.79)),
+							Thread(number: 15, position: CGPoint(x: -1.0, y: 0.15)),
+							Thread(number: 16, position: CGPoint(x: -1.0, y: -0.15))]
+		case .crossocto16:
 			return [Thread(number: 1, position: CGPoint(x: -0.88, y: -0.6)),
 							Thread(number: 2, position: CGPoint(x: -0.66, y: -0.79)),
 							Thread(number: 3, position: CGPoint(x: -0.41, y: -0.92)),
