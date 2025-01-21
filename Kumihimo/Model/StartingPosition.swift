@@ -11,6 +11,7 @@ enum StartingPosition: String, Codable {
 	case cross4
 	case octo8
 	case cross8
+	case crossX8
 	case line8
 	case octo16
 	case cross16
@@ -43,6 +44,15 @@ enum StartingPosition: String, Codable {
 							Thread(number: 6, position: CGPoint(x: -0.15, y: 1.0)),
 							Thread(number: 7, position: CGPoint(x: -1.0, y: 0.15)),
 							Thread(number: 8, position: CGPoint(x: -1.0, y: -0.15))]
+		case .crossX8:
+			return [Thread(number: 1, position: CGPoint(x: -0.8, y: -0.6)),
+							Thread(number: 2, position: CGPoint(x: -0.6, y: -0.8)),
+							Thread(number: 3, position: CGPoint(x: 0.60, y: -0.80)),
+							Thread(number: 4, position: CGPoint(x: 0.80, y: -0.60)),
+							Thread(number: 5, position: CGPoint(x: 0.8, y: 0.6)),
+							Thread(number: 6, position: CGPoint(x: 0.6, y: 0.8)),
+							Thread(number: 7, position: CGPoint(x: -0.6, y: 0.8)),
+							Thread(number: 8, position: CGPoint(x: -0.8, y: 0.6))]
 		case .line8:
 			return [Thread(number: 1, position: CGPoint(x: -0.45, y: -0.9)),
 							Thread(number: 2, position: CGPoint(x: -0.15, y: -1.0)),
