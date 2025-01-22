@@ -18,7 +18,7 @@ struct Braid: Codable, Identifiable, Equatable, Hashable {
 	var name: String = "Braid"
 	var threadCount: Int = 4
 	var startingPosition: StartingPosition = .cross4
-	var profile: ProfileType = .xSquare
+	var profile: ProfileType = .spiral
 	
 	func hash(into hasher: inout Hasher) {
 		hasher.combine(id)
@@ -38,4 +38,5 @@ enum ProfileType: String, Codable {
 	case gantel
 	case xSquare
 	case octo
+	case spiral
 }

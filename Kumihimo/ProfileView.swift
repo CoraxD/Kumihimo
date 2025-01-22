@@ -135,6 +135,25 @@ struct ProfileView: View {
 				.fill(.white)
 				.stroke(.black, lineWidth: 3)
 				.frame(width: 30, height: 30)
+			case .spiral:
+				Circle()
+					.fill(.white)
+					.stroke(.black, lineWidth: 3)
+					.frame(width: 30, height: 30)
+				Path { path in
+					path.move(to: CGPoint(x: 15, y: 12.18))
+					path.addCurve(to: CGPoint(x: 12.73, y: 0.17), control1: CGPoint(x: 9.99, y: 12.18), control2: CGPoint(x: 9.97, y: 5.02))
+					path.addCurve(to: CGPoint(x: 6.16, y: 14.45), control1: CGPoint(x: 7.71, y: 3.71), control2: CGPoint(x: 5.7, y: 9.8))
+					path.addCurve(to: CGPoint(x: 11.44, y: 20.92), control1: CGPoint(x: 6.49, y: 17.79), control2: CGPoint(x: 8.55, y: 20.92))
+					path.addCurve(to: CGPoint(x: 15, y: 17.82), control1: CGPoint(x: 13.56, y: 20.92), control2: CGPoint(x: 15, y: 19.67))
+					path.addCurve(to: CGPoint(x: 17.27, y: 29.83), control1: CGPoint(x: 20.01, y: 17.82), control2: CGPoint(x: 20.03, y: 24.98))
+					path.addCurve(to: CGPoint(x: 23.84, y: 15.55), control1: CGPoint(x: 22.29, y: 26.29), control2: CGPoint(x: 24.3, y: 20.2))
+					path.addCurve(to: CGPoint(x: 18.56, y: 9.08), control1: CGPoint(x: 23.52, y: 12.21), control2: CGPoint(x: 21.45, y: 9.08))
+					path.addCurve(to: CGPoint(x: 15, y: 12.18), control1: CGPoint(x: 16.44, y: 9.08), control2: CGPoint(x: 15, y: 10.33))
+					path.closeSubpath()
+				}
+				.stroke(.black, style: StrokeStyle(lineWidth: 2, lineJoin: .round))
+				.frame(width: 30, height: 30)
 			}
 		}
 	}
