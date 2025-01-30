@@ -20,20 +20,20 @@ struct Grid4aShape1: Shape {
 		
 			//// Group
 			//// Rectangle Drawing
-		path.move(to: CGPoint(x: frame.minX + 0.00000 * frame.width, y: frame.minY + 0.40000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.24967 * frame.width, y: frame.minY + 0.40000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.24967 * frame.width, y: frame.minY + 0.00000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.00000 * frame.width, y: frame.minY + 0.00000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.00000 * frame.width, y: frame.minY + 0.40000 * frame.height))
+		path.move(to: CGPoint(x: (frame.minX + 0.00000 * frame.width).rounded() + 0.5, y: (frame.minY + 0.40000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.24967 * frame.width).rounded() + 0.5, y: (frame.minY + 0.40000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.24967 * frame.width).rounded() + 0.5, y: (frame.minY + 0.00000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.00000 * frame.width).rounded() + 0.5, y: (frame.minY + 0.00000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.00000 * frame.width).rounded() + 0.5, y: (frame.minY + 0.40000 * frame.height).rounded() + 0.5))
 		path.closeSubpath()
 		
 		
 			//// Rectangle 6 Drawing
-		path.move(to: CGPoint(x: frame.minX + 0.49933 * frame.width, y: frame.minY + 0.80000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.74900 * frame.width, y: frame.minY + 0.80000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.74900 * frame.width, y: frame.minY + 0.40000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.49933 * frame.width, y: frame.minY + 0.40000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.49933 * frame.width, y: frame.minY + 0.80000 * frame.height))
+		path.move(to: CGPoint(x: (frame.minX + 0.49933 * frame.width).rounded() + 0.5, y: (frame.minY + 0.80000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.74933 * frame.width).rounded() + 0.5, y: (frame.minY + 0.80000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.74933 * frame.width).rounded() + 0.5, y: (frame.minY + 0.40000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.49933 * frame.width).rounded() + 0.5, y: (frame.minY + 0.40000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.49933 * frame.width).rounded() + 0.5, y: (frame.minY + 0.80000 * frame.height).rounded() + 0.5))
 		path.closeSubpath()
 
 		return path
@@ -48,20 +48,20 @@ struct Grid4aShape2: Shape {
 		
 			//// Group 2
 			//// Rectangle 3 Drawing
-		path.move(to: CGPoint(x: frame.minX + 0.24967 * frame.width, y: frame.minY + 0.60000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.49933 * frame.width, y: frame.minY + 0.60000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.49933 * frame.width, y: frame.minY + 0.20000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.24967 * frame.width, y: frame.minY + 0.20000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.24967 * frame.width, y: frame.minY + 0.60000 * frame.height))
+		path.move(to: CGPoint(x: (frame.minX + 0.24967 * frame.width).rounded() + 0.5, y: (frame.minY + 0.60000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.49933 * frame.width).rounded() + 0.5, y: (frame.minY + 0.60000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.49933 * frame.width).rounded() + 0.5, y: (frame.minY + 0.20000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.24967 * frame.width).rounded() + 0.5, y: (frame.minY + 0.20000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.24967 * frame.width).rounded() + 0.5, y: (frame.minY + 0.60000 * frame.height).rounded() + 0.5))
 		path.closeSubpath()
 		
 		
 			//// Rectangle 8 Drawing
-		path.move(to: CGPoint(x: frame.minX + 0.74933 * frame.width, y: frame.minY + 1.00000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.99900 * frame.width, y: frame.minY + 1.00000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.99900 * frame.width, y: frame.minY + 0.60000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.74933 * frame.width, y: frame.minY + 0.60000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.74933 * frame.width, y: frame.minY + 1.00000 * frame.height))
+		path.move(to: CGPoint(x: (frame.minX + 0.74933 * frame.width).rounded() + 0.5, y: (frame.minY + 1.00000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.99900 * frame.width).rounded() + 0.5, y: (frame.minY + 1.00000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.99900 * frame.width).rounded() + 0.5, y: (frame.minY + 0.60000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.74933 * frame.width).rounded() + 0.5, y: (frame.minY + 0.60000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.74933 * frame.width).rounded() + 0.5, y: (frame.minY + 1.00000 * frame.height).rounded() + 0.5))
 		path.closeSubpath()
 		
 		return path
@@ -76,20 +76,20 @@ struct Grid4aShape3: Shape {
 		
 			//// Group 3
 			//// Rectangle 2 Drawing
-		path.move(to: CGPoint(x: frame.minX + 0.00000 * frame.width, y: frame.minY + 0.80000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.24967 * frame.width, y: frame.minY + 0.80000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.24967 * frame.width, y: frame.minY + 0.40000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.00000 * frame.width, y: frame.minY + 0.40000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.00000 * frame.width, y: frame.minY + 0.80000 * frame.height))
+		path.move(to: CGPoint(x: (frame.minX + 0.00000 * frame.width).rounded() + 0.5, y: (frame.minY + 0.80000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.24967 * frame.width).rounded() + 0.5, y: (frame.minY + 0.80000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.24967 * frame.width).rounded() + 0.5, y: (frame.minY + 0.40000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.00000 * frame.width).rounded() + 0.5, y: (frame.minY + 0.40000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.00000 * frame.width).rounded() + 0.5, y: (frame.minY + 0.80000 * frame.height).rounded() + 0.5))
 		path.closeSubpath()
 		
 		
 			//// Rectangle 5 Drawing
-		path.move(to: CGPoint(x: frame.minX + 0.49933 * frame.width, y: frame.minY + 0.40000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.74900 * frame.width, y: frame.minY + 0.40000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.74900 * frame.width, y: frame.minY + 0.00000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.49933 * frame.width, y: frame.minY + 0.00000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.49933 * frame.width, y: frame.minY + 0.40000 * frame.height))
+		path.move(to: CGPoint(x: (frame.minX + 0.49933 * frame.width).rounded() + 0.5, y: (frame.minY + 0.40000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.74933 * frame.width).rounded() + 0.5, y: (frame.minY + 0.40000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.74933 * frame.width).rounded() + 0.5, y: (frame.minY + 0.00000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.49933 * frame.width).rounded() + 0.5, y: (frame.minY + 0.00000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.49933 * frame.width).rounded() + 0.5, y: (frame.minY + 0.40000 * frame.height).rounded() + 0.5))
 		path.closeSubpath()
 		
 		return path
@@ -104,19 +104,19 @@ struct Grid4aShape4: Shape {
 		
 			//// Group 4
 			//// Rectangle 4 Drawing
-		path.move(to: CGPoint(x: frame.minX + 0.24967 * frame.width, y: frame.minY + 1.00000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.49933 * frame.width, y: frame.minY + 1.00000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.49933 * frame.width, y: frame.minY + 0.60000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.24967 * frame.width, y: frame.minY + 0.60000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.24967 * frame.width, y: frame.minY + 1.00000 * frame.height))
+		path.move(to: CGPoint(x: (frame.minX + 0.24967 * frame.width).rounded() + 0.5, y: (frame.minY + 1.00000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.49933 * frame.width).rounded() + 0.5, y: (frame.minY + 1.00000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.49933 * frame.width).rounded() + 0.5, y: (frame.minY + 0.60000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.24967 * frame.width).rounded() + 0.5, y: (frame.minY + 0.60000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.24967 * frame.width).rounded() + 0.5, y: (frame.minY + 1.00000 * frame.height).rounded() + 0.5))
 		path.closeSubpath()
 		
 			//// Rectangle 7 Drawing
-		path.move(to: CGPoint(x: frame.minX + 0.74933 * frame.width, y: frame.minY + 0.60000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.99900 * frame.width, y: frame.minY + 0.60000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.99900 * frame.width, y: frame.minY + 0.20000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.74933 * frame.width, y: frame.minY + 0.20000 * frame.height))
-		path.addLine(to: CGPoint(x: frame.minX + 0.74933 * frame.width, y: frame.minY + 0.60000 * frame.height))
+		path.move(to: CGPoint(x: (frame.minX + 0.74933 * frame.width).rounded() + 0.5, y: (frame.minY + 0.60000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.99900 * frame.width).rounded() + 0.5, y: (frame.minY + 0.60000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.99900 * frame.width).rounded() + 0.5, y: (frame.minY + 0.20000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.74933 * frame.width).rounded() + 0.5, y: (frame.minY + 0.20000 * frame.height).rounded() + 0.5))
+		path.addLine(to: CGPoint(x: (frame.minX + 0.74933 * frame.width).rounded() + 0.5, y: (frame.minY + 0.60000 * frame.height).rounded() + 0.5))
 		path.closeSubpath()
 		
 		return path
