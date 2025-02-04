@@ -121,6 +121,18 @@ struct ImageView: View {
 				Image("Image-16n")
 					.resizable()
 					.scaledToFit()
+			case "Braid 16P":
+				Image("Image-16p")
+					.resizable()
+					.scaledToFit()
+			case "Braid 16Q":
+				Image("Image-16q")
+					.resizable()
+					.scaledToFit()
+			case "Braid 16R":
+				Image("Image-16r")
+					.resizable()
+					.scaledToFit()
 			default:
 				Image("Image-4a")
 					.resizable()

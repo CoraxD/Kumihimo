@@ -154,6 +154,54 @@ struct ProfileView: View {
 				}
 				.stroke(.black, style: StrokeStyle(lineWidth: 2, lineJoin: .round))
 				.frame(width: 30, height: 30)
+			case .ellipse:
+				Ellipse()
+					.fill(.white)
+					.stroke(.black, lineWidth: 3)
+					.frame(width: 40, height: 15)
+			case .roundCross:
+				Circle()
+					.fill(.white)
+					.stroke(.black, lineWidth: 3)
+					.frame(width: 30, height: 30)
+				Circle()
+					.fill(.white)
+					.stroke(.gray, lineWidth: 2)
+					.frame(width: 8, height: 8)
+				Path { path in
+						//// Bezier 1 Drawing
+					path.move(to: CGPoint(x: 0.56, y: 19))
+					path.addLine(to: CGPoint(x: 7, y: 19))
+					path.addCurve(to: CGPoint(x: 11, y: 15), control1: CGPoint(x: 9.21, y: 19), control2: CGPoint(x: 11, y: 17.21))
+					path.addCurve(to: CGPoint(x: 7, y: 11), control1: CGPoint(x: 11, y: 12.79), control2: CGPoint(x: 9.21, y: 11))
+					path.addLine(to: CGPoint(x: 0.56, y: 11))
+					
+					
+						//// Bezier 2 Drawing
+					path.move(to: CGPoint(x: 11, y: 0.56))
+					path.addLine(to: CGPoint(x: 11, y: 7))
+					path.addCurve(to: CGPoint(x: 15, y: 11), control1: CGPoint(x: 11, y: 9.21), control2: CGPoint(x: 12.79, y: 11))
+					path.addCurve(to: CGPoint(x: 19, y: 7), control1: CGPoint(x: 17.21, y: 11), control2: CGPoint(x: 19, y: 9.21))
+					path.addLine(to: CGPoint(x: 19, y: 0.56))
+					
+					
+						//// Bezier 3 Drawing
+					path.move(to: CGPoint(x: 29.44, y: 11))
+					path.addLine(to: CGPoint(x: 23, y: 11))
+					path.addCurve(to: CGPoint(x: 19, y: 15), control1: CGPoint(x: 20.79, y: 11), control2: CGPoint(x: 19, y: 12.79))
+					path.addCurve(to: CGPoint(x: 23, y: 19), control1: CGPoint(x: 19, y: 17.21), control2: CGPoint(x: 20.79, y: 19))
+					path.addLine(to: CGPoint(x: 29.44, y: 19))
+					
+					
+						//// Bezier 4 Drawing
+					path.move(to: CGPoint(x: 19, y: 29.44))
+					path.addLine(to: CGPoint(x: 19, y: 23))
+					path.addCurve(to: CGPoint(x: 15, y: 19), control1: CGPoint(x: 19, y: 20.79), control2: CGPoint(x: 17.21, y: 19))
+					path.addCurve(to: CGPoint(x: 11, y: 23), control1: CGPoint(x: 12.79, y: 19), control2: CGPoint(x: 11, y: 20.79))
+					path.addLine(to: CGPoint(x: 11, y: 29.44))
+				}
+				.stroke(.black, style: StrokeStyle(lineWidth: 2, lineJoin: .round))
+				.frame(width: 30, height: 30)
 			}
 		}
 	}
