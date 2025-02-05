@@ -19,6 +19,7 @@ struct Braid: Codable, Identifiable, Equatable, Hashable {
 	var threadCount: Int = 4
 	var startingPosition: StartingPosition = .cross4
 	var profile: ProfileType = .roundCross
+	var moveSteps: [MoveStep] = [MoveStep()]
 	
 	func hash(into hasher: inout Hasher) {
 		hasher.combine(id)
