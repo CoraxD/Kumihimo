@@ -25,7 +25,7 @@ struct MoveView: View {
 							.stroke(.black, lineWidth: 1)
 							.frame(width: threadSize, height: threadSize)
 							.offset(x: 110 * sin(Double(thread) * Double.pi/180.0),
-											y: 110 * cos(Double(thread) * Double.pi/180.0))
+											y: 110 * -cos(Double(thread) * Double.pi/180.0))
 					}
 					ArrowShape(radius: 110.0, move: moveStep.leftMove)
 						.stroke(.black)
@@ -35,7 +35,7 @@ struct MoveView: View {
 						.stroke(.black, lineWidth: 1)
 						.frame(width: threadSize, height: threadSize)
 						.offset(x: 110 * sin(Double(moveStep.leftMove.start) * Double.pi/180.0),
-										y: 110 * cos(Double(moveStep.leftMove.start) * Double.pi/180.0))
+										y: 110 * -cos(Double(moveStep.leftMove.start) * Double.pi/180.0))
 					ArrowShape(radius: 110.0, move: moveStep.rightMove)
 						.stroke(.black)
 						.offset(x: 120, y: 120)
@@ -44,7 +44,7 @@ struct MoveView: View {
 						.stroke(.black, lineWidth: 1)
 						.frame(width: threadSize, height: threadSize)
 						.offset(x: 110 * sin(Double(moveStep.rightMove.start) * Double.pi/180.0),
-										y: 110 * cos(Double(moveStep.rightMove.start) * Double.pi/180.0))
+										y: 110 * -cos(Double(moveStep.rightMove.start) * Double.pi/180.0))
 					
 				}
 				.frame(width: 240, height: 240, alignment: .center)

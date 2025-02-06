@@ -22,7 +22,9 @@ struct SchemeView: View {
 						.font(.title)
 				}
 				.buttonStyle(.plain)
-				MoveView(step: $curStep, moveStep: $braidStorage.curBraid.moveSteps[curStep - 1])
+				MoveView(step: $curStep, moveStep: curStep > braidStorage.curBraid.moveSteps.count
+								 ? $braidStorage.curBraid.moveSteps[0]
+								 : $braidStorage.curBraid.moveSteps[curStep - 1])
 				Button {
 					curStep = curStep < braidStorage.curBraid.moveSteps.count
 					? curStep + 1
@@ -32,6 +34,9 @@ struct SchemeView: View {
 						.font(.title)
 				}
 				.buttonStyle(.plain)
+			}
+			.onChange(of: braidStorage.curBraid) { _, _ in
+				curStep = 1
 			}
 			HStack {
 				Circle()

@@ -13,9 +13,9 @@ struct ArrowShape: Shape {
 	func path(in rect: CGRect) -> Path {
 		
 		let from: CGPoint = CGPoint(x: radius * sin(Double(move.start) * Double.pi/180.0),
-																y: radius * cos(Double(move.start) * Double.pi/180.0))
+																y: radius * -cos(Double(move.start) * Double.pi/180.0))
 		let to: CGPoint = CGPoint(x: radius * sin(Double(move.finish) * Double.pi/180.0),
-															y: radius * cos(Double(move.finish) * Double.pi/180.0))
+															y: radius * -cos(Double(move.finish) * Double.pi/180.0))
 		
 		var path = Path()
 		path.move(to: from)
