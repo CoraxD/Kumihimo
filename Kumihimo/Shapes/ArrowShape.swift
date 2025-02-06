@@ -43,6 +43,18 @@ struct ArrowShape: Shape {
 			path.move(to: arrowPoint1)
 			path.addLine(to: to)
 			path.addLine(to: arrowPoint2)
+		case .outer:
+			let control1: CGPoint = CGPoint(x: from.x * 1.6, y: from.y * 1.6)
+			let control2: CGPoint = CGPoint(x: to.x * 1.6, y: to.y * 1.6)
+			path.addCurve(to: to, control1: control1, control2: control2)
+			let angle = atan2(to.y - control2.y, to.x - control2.x)
+			let arrowLength: CGFloat = 5
+			let arrowPoint1 = CGPoint(x: to.x - arrowLength * cos(angle - .pi / 6), y: to.y - arrowLength * sin(angle - .pi / 6))
+			let arrowPoint2 = CGPoint(x: to.x - arrowLength * cos(angle + .pi / 6), y: to.y - arrowLength * sin(angle + .pi / 6))
+			
+			path.move(to: arrowPoint1)
+			path.addLine(to: to)
+			path.addLine(to: arrowPoint2)
 		}
 		return path
 	}

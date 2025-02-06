@@ -22,4 +22,5 @@ struct Move: Codable {
 enum MoveType: String, Codable {
 	case line
 	case inner
+	case outer
 }
