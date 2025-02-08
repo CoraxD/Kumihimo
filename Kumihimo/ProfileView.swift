@@ -59,14 +59,14 @@ struct ProfileView: View {
 			case .trapezium:
 				Path { path in
 					path.move(to: CGPoint(x: 0, y: 15))
-					path.addLine(to: CGPoint(x: 10, y: 0))
-					path.addLine(to: CGPoint(x: 35, y: 0))
+					path.addLine(to: CGPoint(x: 8, y: 0))
+					path.addLine(to: CGPoint(x: 37, y: 0))
 					path.addLine(to: CGPoint(x: 45, y: 15))
 					path.closeSubpath()
 				}
 				.fill(.white)
 				.stroke(.black, lineWidth: 3)
-				.frame(width: 40, height: 20)
+				.frame(width: 45, height: 15)
 			case .round:
 				RoundedRectangle(cornerRadius: 7.5)
 					.fill(.white)
@@ -158,7 +158,7 @@ struct ProfileView: View {
 				Ellipse()
 					.fill(.white)
 					.stroke(.black, lineWidth: 3)
-					.frame(width: 40, height: 15)
+					.frame(width: 40, height: 20)
 			case .roundCross:
 				Circle()
 					.fill(.white)
@@ -202,6 +202,43 @@ struct ProfileView: View {
 				}
 				.stroke(.black, style: StrokeStyle(lineWidth: 2, lineJoin: .round))
 				.frame(width: 30, height: 30)
+			case .Uprof:
+				Path { path in
+					path.move(to: CGPoint(x: 0, y: 15))
+					path.addLine(to: CGPoint(x: 0, y: 0))
+					path.addLine(to: CGPoint(x: 18, y: 0))
+					path.addLine(to: CGPoint(x: 18, y: 8))
+					path.addLine(to: CGPoint(x: 27, y: 8))
+					path.addLine(to: CGPoint(x: 27, y: 0))
+					path.addLine(to: CGPoint(x: 45, y: 0))
+					path.addLine(to: CGPoint(x: 45, y: 15))
+					path.closeSubpath()
+				}
+				.fill(.white)
+				.stroke(.black, lineWidth: 3)
+				.frame(width: 45, height: 15)
+			case .Hprof:
+				Path { path in
+					path.move(to: CGPoint(x: 0, y: 15))
+					path.addLine(to: CGPoint(x: 8, y: 0))
+					path.addLine(to: CGPoint(x: 37, y: 0))
+					path.addLine(to: CGPoint(x: 45, y: 15))
+					path.closeSubpath()
+				}
+				.fill(.white)
+				.stroke(.black, lineWidth: 3)
+				.frame(width: 40, height: 20)
+			case .castle:
+				Path { path in
+					path.move(to: CGPoint(x: 0, y: 15))
+					path.addLine(to: CGPoint(x: 8, y: 0))
+					path.addLine(to: CGPoint(x: 37, y: 0))
+					path.addLine(to: CGPoint(x: 45, y: 15))
+					path.closeSubpath()
+				}
+				.fill(.white)
+				.stroke(.black, lineWidth: 3)
+				.frame(width: 40, height: 20)
 			}
 		}
 	}

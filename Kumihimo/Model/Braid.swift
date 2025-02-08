@@ -42,4 +42,7 @@ enum ProfileType: String, Codable {
 	case spiral
 	case ellipse
 	case roundCross
+	case Uprof
+	case Hprof
+	case castle
 }
