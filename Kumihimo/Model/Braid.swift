@@ -14,7 +14,8 @@ struct Braid: Codable, Identifiable, Equatable, Hashable {
 		lhs.id == rhs.id
 	}
 	
-	var id = UUID()
+	var id: UUID = UUID()
+	var text: String?
 	var name: String = "Braid"
 	var threadCount: Int = 4
 	var startingPosition: StartingPosition = .cross4

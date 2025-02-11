@@ -20,11 +20,12 @@ struct StartingPositionView: View {
     var body: some View {
 			GeometryReader { geometry in
 				ZStack() {
+					BraidView()
+						.padding(30)
 					Circle()
 						.offset()
-						.fill(Color(white: 0.8))
 						.stroke(.black, lineWidth: 1.5)
-						.padding(35)
+						.padding(30)
 						.onTapGesture {
 							braidStorage.activeThread = []
 						}

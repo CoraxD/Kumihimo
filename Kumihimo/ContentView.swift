@@ -34,6 +34,7 @@ struct ContentView: View {
 			.frame(minWidth: 280, maxWidth: 350)
 		} detail: {
 			VStack {
+				Text(braidStorage.curBraid.text ?? "Test text")
 				Spacer()
 				if showGrid {
 					GridView()
