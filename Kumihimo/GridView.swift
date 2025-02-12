@@ -78,6 +78,10 @@ struct GridView: View {
 					Grid16sView()
 				case "Braid 16T":
 					Grid16tView()
+				case "Braid 16U":
+					Grid16uView()
+				case "Braid 16V":
+					Grid16vView()
 				default:
 					Grid4aView()
 				}
