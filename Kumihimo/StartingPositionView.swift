@@ -21,7 +21,7 @@ struct StartingPositionView: View {
 			GeometryReader { geometry in
 				ZStack() {
 					BraidView()
-						.padding(30)
+						.padding(29)
 					Circle()
 						.offset()
 						.stroke(.black, lineWidth: 1.5)
