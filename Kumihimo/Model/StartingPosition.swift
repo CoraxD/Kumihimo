@@ -15,6 +15,7 @@ enum StartingPosition: String, Codable {
 	case line8
 	case octo16
 	case cross16
+	case crossX16
 	case line16
 	case crossline16
 	case crossocto16
@@ -96,6 +97,23 @@ enum StartingPosition: String, Codable {
 							Thread(number: 14, angle: 262),
 							Thread(number: 15, angle: 278),
 							Thread(number: 16, angle: 294)]
+		case .crossX16:
+			return [Thread(number: 1, angle: 291),
+							Thread(number: 2, angle: 307),
+							Thread(number: 3, angle: 323),
+							Thread(number: 4, angle: 339),
+							Thread(number: 5, angle: 21),
+							Thread(number: 6, angle: 37),
+							Thread(number: 7, angle: 53),
+							Thread(number: 8, angle: 69),
+							Thread(number: 9, angle: 111),
+							Thread(number: 10, angle: 127),
+							Thread(number: 11, angle: 143),
+							Thread(number: 12, angle: 159),
+							Thread(number: 13, angle: 201),
+							Thread(number: 14, angle: 217),
+							Thread(number: 15, angle: 233),
+							Thread(number: 16, angle: 249)]
 		case .line16:
 			return [Thread(number: 1, angle: 304),
 							Thread(number: 2, angle: 320),
