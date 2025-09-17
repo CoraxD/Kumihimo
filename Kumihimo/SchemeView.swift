@@ -55,8 +55,13 @@ struct SchemeView: View {
 					Button {
 						curStep = step
 					} label: {
-						Text("\(step)")
-							.font(.title2)
+						ZStack {
+							Circle()
+								.fill(Color.white)
+							Text("\(step)")
+								.font(.title2)
+						}
+						.frame(width: 30, height: 30)
 					}
 					.buttonStyle(.plain)
 					.disabled(curStep == step)

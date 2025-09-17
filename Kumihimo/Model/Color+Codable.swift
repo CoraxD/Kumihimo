@@ -25,7 +25,7 @@ extension Color {
 	}
 }
 
-extension Color: Codable {
+extension Color: @retroactive Codable {
 	init(hex: String) {
 		let rgba = hex.toRGBA()
 		
