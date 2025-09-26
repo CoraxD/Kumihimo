@@ -11,7 +11,7 @@ struct SchemeView: View {
 	@EnvironmentObject var braidStorage: BraidStorage
 	@State var curStep: Int = 1
 	var body: some View {
-		VStack(spacing: 20) {
+		VStack() {
 			HStack {
 				Button {
 					curStep = curStep > 1

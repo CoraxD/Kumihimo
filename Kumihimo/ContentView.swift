@@ -7,9 +7,15 @@
 
 import SwiftUI
 
+enum ViewType {
+	case gridView
+	case schemeView
+	case textView
+}
+
 struct ContentView: View {
 	@EnvironmentObject var braidStorage: BraidStorage
-	@State var showGrid: Bool = true
+	@State var viewType: ViewType = .gridView
 	var body: some View {
 		NavigationSplitView {
 			VStack {
@@ -34,26 +40,30 @@ struct ContentView: View {
 			.frame(minWidth: 280, maxWidth: 350)
 		} detail: {
 			VStack {
-				Text(braidStorage.curBraid.text ?? "Test text")
-				Spacer()
-				if showGrid {
-					GridView()
-				} else {
-					SchemeView()
+				switch viewType {
+				case .gridView: GridView()
+				case .schemeView: SchemeView()
+				case .textView: TextView()
 				}
 				Spacer()
 				HStack {
-					Button("Show Grid", systemImage: "rectangle.pattern.checkered")
+					Button("Grid", systemImage: "rectangle.pattern.checkered")
 					{
-						showGrid = true
+						viewType = .gridView
 					}
-					.disabled(showGrid)
+					.disabled(viewType == .gridView)
 					Spacer()
-					Button("Show Scheme", systemImage: "timelapse")
+					Button("Description", systemImage: "text.alignleft")
 					{
-						showGrid = false
+						viewType = .textView
 					}
-					.disabled(!showGrid)
+					.disabled(viewType == .textView)
+					Spacer()
+					Button("Scheme", systemImage: "timelapse")
+					{
+						viewType = .schemeView
+					}
+					.disabled(viewType == .schemeView)
 				}
 				.padding(.top)
 				.buttonStyle(.plain)
