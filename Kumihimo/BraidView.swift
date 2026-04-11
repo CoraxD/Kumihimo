@@ -149,6 +149,14 @@ struct BraidView: View {
 				Image("Braid-16v")
 					.resizable()
 					.scaledToFit()
+			case "Braid 16W":
+				Image("Braid-16w")
+					.resizable()
+					.scaledToFit()
+			case "Braid 16X":
+				Image("Braid-16x")
+					.resizable()
+					.scaledToFit()
 			case "Braid 16Y":
 				Image("Braid-16y")
 					.resizable()
