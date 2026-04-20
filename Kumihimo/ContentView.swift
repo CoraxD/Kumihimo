@@ -16,6 +16,7 @@ enum ViewType {
 struct ContentView: View {
 	@EnvironmentObject var braidStorage: BraidStorage
 	@State var viewType: ViewType = .gridView
+	var image: Image = Image(systemName: "rectangle.pattern.checkered")
 	var body: some View {
 		NavigationSplitView {
 			VStack {
@@ -24,7 +25,7 @@ struct ContentView: View {
 						.font(.title)
 						.frame(minWidth: 100)
 					Spacer()
-					ProfileView()
+					ProfileView(profile: braidStorage.curBraid.profile)
 				}
 				.frame(minHeight: 40)
 				ImageView()
@@ -32,7 +33,10 @@ struct ContentView: View {
 				StartingPositionView()
 				Picker("", selection: $braidStorage.curBraid) {
 					ForEach(braidStorage.braids, id: \.self) {brade in
-						Text(brade.name).tag(brade.name)
+						HStack {
+							Image(nsImage: ImageRenderer(content: ProfileView(profile: brade.profile).scaleEffect(0.3).frame(width: 20, height: 20)).nsImage ?? NSImage(imageLiteralResourceName: "rectangle"))
+							Text(brade.name).tag(brade.name)
+						}
 					}
 				}
 			}

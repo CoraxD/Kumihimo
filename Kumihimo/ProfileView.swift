@@ -9,9 +9,10 @@ import SwiftUI
 
 struct ProfileView: View {
 	@EnvironmentObject var braidStorage: BraidStorage
+	var profile: ProfileType
 	var body: some View {
 		ZStack {
-			switch braidStorage.curBraid.profile {
+			switch profile {
 			case .circle:
 				Circle()
 					.fill(.white)
@@ -270,7 +271,7 @@ struct ProfileView: View {
 }
 
 #Preview {
-	ProfileView()
+	ProfileView(profile: ProfileType.castle)
 		.environmentObject(BraidStorage())
 		.padding()
 }
